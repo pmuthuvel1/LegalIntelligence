@@ -1,0 +1,8 @@
+{
+  "id": "cap-sample-006",
+  "name": "Brown v. City Contractors",
+  "decision_date": "1925-04-18",
+  "citations": [{"type": "official", "cite": "82 Ark. 220"}],
+  "source": "https://case.law/",
+  "casebody": {"opinions": [{"text": "Quantum meruit recovery allowed where work was accepted despite unenforceable subcontract."}]}
+}

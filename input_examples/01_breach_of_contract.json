@@ -1,0 +1,42 @@
+{
+  "case_id": "DEMO-BREACH-001",
+  "title": "Acme Supply v. Delta Distributors — anticipatory breach of goods contract",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Pulaski County",
+  "parties": {
+    "plaintiff": "Acme Supply LLC",
+    "defendant": "Delta Distributors Inc."
+  },
+  "claims": [
+    "breach of contract",
+    "anticipatory breach",
+    "expectation damages"
+  ],
+  "legal_issues": [
+    "anticipatory repudiation",
+    "damages on resale"
+  ],
+  "relief_sought": [
+    "Compensatory damages of $125,000",
+    "Prejudgment interest",
+    "Costs and reasonable attorney fees if contract provides"
+  ],
+  "key_facts": [
+    "Written contract dated January 5, 2025 for delivery of 500 units on March 15, 2025.",
+    "Defendant emailed March 1, 2025 refusing to accept delivery without legal excuse.",
+    "Plaintiff resold goods at market and seeks price differential."
+  ],
+  "contract_clauses": [
+    {
+      "name": "Delivery clause",
+      "text": "Seller shall deliver 500 units FOB Little Rock on March 15, 2025."
+    },
+    {
+      "name": "Remedies clause",
+      "text": "Upon breach, non-breaching party may resell in good faith and recover expectation damages."
+    }
+  ],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}

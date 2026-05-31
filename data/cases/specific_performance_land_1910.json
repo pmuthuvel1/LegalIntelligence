@@ -1,0 +1,14 @@
+{
+  "id": "cap-sample-003",
+  "name": "Thompson v. Greenacre Estates",
+  "decision_date": "1910-06-20",
+  "citations": [{"type": "official", "cite": "75 Ark. 88"}],
+  "court": {"name": "Arkansas Supreme Court"},
+  "source": "Caselaw Access Project sample — https://case.law/",
+  "casebody": {
+    "opinions": [{
+      "type": "majority",
+      "text": "Specific performance granted. Land is unique; the buyer demonstrated readiness to close and the contract identified the tract with certainty."
+    }]
+  }
+}

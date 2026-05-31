@@ -1,0 +1,49 @@
+{
+  "name": "legal-intelligence",
+  "version": "2.0.0",
+  "description": "Production multi-agent LangGraph system with critic peer review and supervisor revision loops",
+  "domain": "legal_intelligence",
+  "language": "python",
+  "python_version": "3.12",
+  "framework": "langgraph",
+  "framework_version": "1.2.2",
+  "entry_point": "run.py",
+  "ui_entry_point": "run_ui.py",
+  "ui_port": 8001,
+  "agents": [
+    {"id": "intake", "role": "Validates and structures case filing inputs"},
+    {"id": "research", "role": "Retrieves CAP precedents; expands on critic feedback during revisions"},
+    {"id": "precedent_analyst", "role": "Analyzes holdings, win rates, and distinguishing factors"},
+    {"id": "outcome_predictor", "role": "Estimates likely judgment scenarios with confidence bands"},
+    {"id": "strategy", "role": "Win strategies; incorporates critique on revision passes"},
+    {"id": "filing", "role": "Assembles draft filing package and pre-filing checklist"},
+    {"id": "critic", "role": "Peer review with quality score and rewrite recommendations"},
+    {"id": "supervisor", "role": "Approve/revise gate with max-revision safeguard and final report"}
+  ],
+  "interaction_patterns": [
+    "shared_state_handoffs",
+    "inter_agent_messages",
+    "critic_peer_review",
+    "supervisor_conditional_routing",
+    "revision_loops"
+  ],
+  "data_sources": [
+    {"name": "Caselaw Access Project", "url": "https://case.law/"},
+    {"name": "CourtListener API", "url": "https://www.courtlistener.com/", "optional": true}
+  ],
+  "capabilities": [
+    "case_intake_structuring",
+    "precedent_research",
+    "outcome_prediction",
+    "win_strategy_generation",
+    "favorable_judgment_tactics",
+    "filing_package_draft",
+    "critic_quality_gate",
+    "supervisor_revision_routing",
+    "checkpointed_sessions",
+    "structured_logging",
+    "health_and_readiness_probes"
+  ],
+  "requires_api_key": true,
+  "optional_integrations": ["OPENAI_API_KEY", "COURTLISTENER_API_TOKEN"]
+}

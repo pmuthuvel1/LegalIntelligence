@@ -1,0 +1,34 @@
+{
+  "case_id": "DEMO-EMP-002",
+  "title": "Jordan Lee v. Ozark Tech — wrongful termination under definite-term contract",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Washington County",
+  "parties": {
+    "plaintiff": "Jordan Lee",
+    "defendant": "Ozark Tech Partners LLC"
+  },
+  "claims": [
+    "breach of employment contract",
+    "wrongful termination",
+    "damages for unexpired term"
+  ],
+  "relief_sought": [
+    "Wages for remaining eight months of contract term",
+    "Mitigation credit for part-time earnings",
+    "Declaratory judgment on contract validity"
+  ],
+  "key_facts": [
+    "One-year employment agreement signed April 1, 2025 with fixed end date March 31, 2026.",
+    "Defendant terminated plaintiff without cause on August 1, 2025 citing restructuring.",
+    "Plaintiff mitigated by obtaining part-time work paying 40% of prior salary."
+  ],
+  "contract_clauses": [
+    {
+      "name": "Term",
+      "text": "Employment shall continue for twelve months unless terminated for cause as defined in Section 4."
+    }
+  ],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}

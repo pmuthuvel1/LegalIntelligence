@@ -1,0 +1,8 @@
+{
+  "id": "cap-sample-004",
+  "name": "Davis v. Ozark Manufacturing",
+  "decision_date": "1915-01-10",
+  "citations": [{"type": "official", "cite": "78 Ark. 401"}],
+  "source": "https://case.law/",
+  "casebody": {"opinions": [{"text": "Wrongful termination during a definite term supports damages for the unexpired period, subject to mitigation."}]}
+}

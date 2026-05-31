@@ -1,0 +1,34 @@
+{
+  "case_id": "DEMO-LAND-003",
+  "title": "Riverfront Holdings v. Greenacre Estates — specific performance of land purchase",
+  "jurisdiction": "Arkansas",
+  "court_type": "Chancery Court",
+  "venue": "Benton County",
+  "parties": {
+    "plaintiff": "Riverfront Holdings LLC",
+    "defendant": "Greenacre Estates Inc."
+  },
+  "claims": [
+    "specific performance",
+    "contract interpretation",
+    "alternative damages"
+  ],
+  "relief_sought": [
+    "Order compelling conveyance of Lot 12 per purchase agreement",
+    "Or alternatively money damages for breach",
+    "Injunctive relief preventing conveyance to third party"
+  ],
+  "key_facts": [
+    "Purchase agreement dated June 1, 2025 identifies Lot 12 by metes and bounds survey.",
+    "Plaintiff tendered full purchase price on closing date; defendant refused to close.",
+    "Defendant entered contract to sell same parcel to a third buyer for higher price."
+  ],
+  "contract_clauses": [
+    {
+      "name": "Property description",
+      "text": "Seller agrees to convey Lot 12, Greenacre Subdivision, as depicted on Exhibit A survey."
+    }
+  ],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}

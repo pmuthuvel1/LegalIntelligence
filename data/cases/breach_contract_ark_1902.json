@@ -1,0 +1,20 @@
+{
+  "id": "cap-sample-001",
+  "name": "Smith v. Jones Mercantile Co.",
+  "name_abbreviation": "Smith",
+  "decision_date": "1902-03-15",
+  "docket_number": "Sample — CAP-style excerpt",
+  "first_page": "194",
+  "last_page": "198",
+  "citations": [{"type": "official", "cite": "71 Ark. 194"}],
+  "court": {"name": "Arkansas Supreme Court", "name_abbreviation": "Ark."},
+  "jurisdiction": {"name": "Arkansas"},
+  "source": "Caselaw Access Project — sample for Legal Intelligence (https://case.law/)",
+  "casebody": {
+    "opinions": [{
+      "type": "majority",
+      "text": "The buyer's letter of March 1, refusing to accept 500 bales of cotton on March 15, was an anticipatory repudiation. The seller properly resold at market and may recover the contract price differential as expectation damages."
+    }]
+  },
+  "headnotes": "Anticipatory breach; expectation damages on resale."
+}

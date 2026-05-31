@@ -1,0 +1,14 @@
+{
+  "id": "cap-sample-002",
+  "name": "Williams v. Central Railroad",
+  "decision_date": "1905-11-02",
+  "citations": [{"type": "official", "cite": "72 Ark. 310"}],
+  "court": {"name": "Arkansas Supreme Court"},
+  "source": "Caselaw Access Project sample — https://case.law/",
+  "casebody": {
+    "opinions": [{
+      "type": "majority",
+      "text": "Judgment affirmed. Contributory negligence bars recovery where the plaintiff failed to exercise ordinary care at a known dangerous crossing."
+    }]
+  }
+}

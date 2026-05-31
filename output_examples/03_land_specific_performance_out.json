@@ -1,0 +1,653 @@
+{
+  "report": {
+    "generated_at": "2026-05-31T13:52:45.019898+00:00",
+    "case_id": "DEMO-LAND-003",
+    "title": "Riverfront Holdings v. Greenacre Estates \u2014 specific performance of land purchase",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 82.5,
+    "revision_count": 0,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 82.5,
+      "recommendations": [
+        "Analysis meets quality thresholds; ready for supervisor approval."
+      ],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 82.5,
+        "approval_threshold": 70.0,
+        "dimension_scores": {
+          "precedents": 85.0,
+          "outcomes": 80.0,
+          "strategy": 82.0
+        },
+        "issues": [],
+        "recommendations": [
+          "Analysis meets quality thresholds; ready for supervisor approval."
+        ],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-LAND-003",
+      "title": "Riverfront Holdings v. Greenacre Estates \u2014 specific performance of land purchase",
+      "jurisdiction": "Arkansas",
+      "court_type": "Chancery Court",
+      "venue": "Benton County",
+      "parties": {
+        "plaintiff": "Riverfront Holdings LLC",
+        "defendant": "Greenacre Estates Inc."
+      },
+      "claims": [
+        "specific performance",
+        "contract interpretation",
+        "alternative damages"
+      ],
+      "legal_issues": [
+        "specific performance",
+        "contract interpretation",
+        "alternative damages"
+      ],
+      "relief_sought": [
+        "Order compelling conveyance of Lot 12 per purchase agreement",
+        "Or alternatively money damages for breach",
+        "Injunctive relief preventing conveyance to third party"
+      ],
+      "key_facts": [
+        "Purchase agreement dated June 1, 2025 identifies Lot 12 by metes and bounds survey.",
+        "Plaintiff tendered full purchase price on closing date; defendant refused to close.",
+        "Defendant entered contract to sell same parcel to a third buyer for higher price."
+      ],
+      "contract_clauses": [
+        {
+          "name": "Property description",
+          "text": "Seller agrees to convey Lot 12, Greenacre Subdivision, as depicted on Exhibit A survey."
+        }
+      ],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-05-31T13:52:45.008357+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 6,
+      "plaintiff_win_rate_in_sample": 0.667,
+      "top_issues_in_corpus": [
+        [
+          "damages",
+          3
+        ],
+        [
+          "breach of contract",
+          2
+        ],
+        [
+          "specific performance",
+          1
+        ],
+        [
+          "real property",
+          1
+        ],
+        [
+          "contract interpretation",
+          1
+        ]
+      ],
+      "cases": [
+        {
+          "citation": "75 Ark. 88 (1910)",
+          "name": "Thompson v. Greenacre Estates",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1910-06-20",
+          "relevance_score": 15.2154,
+          "holding_summary": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "71 Ark. 194 (1902)",
+          "name": "Smith v. Jones Mercantile Co.",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1902-03-15",
+          "relevance_score": 7.9725,
+          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "72 Ark. 310 (1905)",
+          "name": "Williams v. Central Railroad",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1905-11-02",
+          "relevance_score": 2.9863,
+          "holding_summary": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 2.8045,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "78 Ark. 401 (1915)",
+          "name": "Davis v. Ozark Manufacturing",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1915-01-10",
+          "relevance_score": 2.0261,
+          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "82 Ark. 220 (1925)",
+          "name": "Brown v. City Contractors",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1925-04-18",
+          "relevance_score": 0.3355,
+          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "75 Ark. 88 (1910)",
+          "name": "Thompson v. Greenacre Estates",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1910-06-20",
+          "relevance_score": 15.2154,
+          "holding_summary": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "71 Ark. 194 (1902)",
+          "name": "Smith v. Jones Mercantile Co.",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1902-03-15",
+          "relevance_score": 7.9725,
+          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "78 Ark. 401 (1915)",
+          "name": "Davis v. Ozark Manufacturing",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1915-01-10",
+          "relevance_score": 2.0261,
+          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "82 Ark. 220 (1925)",
+          "name": "Brown v. City Contractors",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1925-04-18",
+          "relevance_score": 0.3355,
+          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": [
+        {
+          "citation": "72 Ark. 310 (1905)",
+          "name": "Williams v. Central Railroad",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1905-11-02",
+          "relevance_score": 2.9863,
+          "holding_summary": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 2.8045,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ]
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "low",
+      "precedent_sample_size": 6,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {
+          "scenario": "most_likely",
+          "description": "Judgment substantially in your favor on core liability.",
+          "estimated_probability": 0.667
+        },
+        {
+          "scenario": "best_case",
+          "description": "Full relief: Order compelling conveyance of Lot 12 per purchase agreement, Or alternatively money damages for breach, Injunctive relief preventing conveyance to third party.",
+          "estimated_probability": 0.817
+        },
+        {
+          "scenario": "worst_case",
+          "description": "Dismissal or judgment for opposing party with fee exposure.",
+          "estimated_probability": 0.233
+        }
+      ],
+      "likely_judgment_summary": "Judgment substantially in your favor on core liability.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Anchor claims to strongest favorable precedent",
+        "actions": [
+          "Lead briefing with top 2-3 favorable CAP cases by relevance score.",
+          "Distinguish unfavorable precedents on facts and procedural posture."
+        ],
+        "rationale": "Courts weight on-point authority; controlling precedent reduces outcome variance."
+      },
+      {
+        "priority": 2,
+        "title": "Tighten fact record before filing",
+        "actions": [
+          "Attach chronology exhibit mapping each claim element to documentary proof.",
+          "Identify gaps opposing counsel will exploit in motion to dismiss."
+        ],
+        "rationale": "Early dispositive motions turn on factual completeness at pleading stage."
+      },
+      {
+        "priority": 3,
+        "title": "Procedural positioning",
+        "actions": [
+          "Confirm venue and court_type (Chancery Court) satisfy jurisdictional rules.",
+          "Calendar response deadlines and meet-and-confer obligations local rules may impose."
+        ],
+        "rationale": "Procedural defects can delay or defeat otherwise meritorious claims."
+      },
+      {
+        "priority": 4,
+        "title": "Leverage contract clauses and parol evidence limits",
+        "actions": [
+          "Plead integration clause and choice-of-law terms where advantageous.",
+          "Move to exclude extrinsic evidence inconsistent with plain meaning of key clauses."
+        ],
+        "rationale": "Contract disputes often turn on enforceable clause text from the operative agreement."
+      },
+      {
+        "priority": 5,
+        "title": "Neutralize adverse precedent",
+        "actions": [
+          "Prepare distinguishing brief sections for 72 Ark. 310 (1905).",
+          "Prepare distinguishing brief sections for 80 Ark. 55 (1920)."
+        ],
+        "rationale": "Opposing counsel will cite adverse authority; preempt with factual distinctions."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {
+        "tactic": "Early dispositive framing",
+        "detail": "File a focused motion on your strongest claim to shape discovery and settlement leverage."
+      },
+      {
+        "tactic": "Judicial economy narrative",
+        "detail": "Emphasize narrow, record-based relief that aligns with court resources and precedent."
+      },
+      {
+        "tactic": "Remedy calibration",
+        "detail": "Request relief in tiers matching Judgment substantially in your favor on core liability. to appear reasonable and increase likelihood of favorable partial judgment."
+      },
+      {
+        "tactic": "Settlement corridor",
+        "detail": "Use scenario probabilities to define walk-away points before discovery costs compound."
+      }
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {
+          "section": "Caption",
+          "content": "Riverfront Holdings LLC v. Greenacre Estates Inc."
+        },
+        {
+          "section": "Jurisdiction & Venue",
+          "content": "Arkansas \u2014 Benton County"
+        },
+        {
+          "section": "Parties",
+          "content": "Plaintiff: Riverfront Holdings LLC; Defendant: Greenacre Estates Inc."
+        },
+        {
+          "section": "Claims for Relief",
+          "content": "specific performance; contract interpretation; alternative damages"
+        },
+        {
+          "section": "Statement of Facts",
+          "content": "Numbered paragraphs mapping each element to exhibits (see chronology)."
+        },
+        {
+          "section": "Prayer for Relief",
+          "content": "Order compelling conveyance of Lot 12 per purchase agreement; Or alternatively money damages for breach; Injunctive relief preventing conveyance to third party"
+        }
+      ],
+      "proposed_exhibits": [
+        {
+          "id": "Exhibit A",
+          "description": "Chronology of material events"
+        },
+        {
+          "id": "Exhibit B",
+          "description": "Operative contract and referenced clauses"
+        },
+        {
+          "id": "Exhibit C",
+          "description": "Correspondence showing notice and breach"
+        },
+        {
+          "id": "Exhibit D",
+          "description": "Key precedent: 75 Ark. 88 (1910)"
+        },
+        {
+          "id": "Exhibit E",
+          "description": "Key precedent: 71 Ark. 194 (1902)"
+        },
+        {
+          "id": "Exhibit F",
+          "description": "Key precedent: 72 Ark. 310 (1905)"
+        }
+      ],
+      "pre_filing_checklist": [
+        "Confirm statute of limitations for each claim.",
+        "Verify filing fee and e-filing account for court.",
+        "Include certificate of service template.",
+        "Attach civil cover sheet if required by local rules.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Chancery Court.",
+          "Select complaint initiating civil action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 15.2154,
+        "cap_id": "cap-sample-003",
+        "citation": "75 Ark. 88 (1910)",
+        "name": "Thompson v. Greenacre Estates",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1910-06-20",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": [
+          "specific performance",
+          "real property",
+          "contract interpretation"
+        ],
+        "headnotes": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
+        "snippet": "Where the contract clearly describes the tract and the buyer is ready, willing, and able to close, equity will compel conveyance absent a valid defense.",
+        "source_url": "https://case.law/",
+        "full_case": {
+          "id": "cap-sample-003",
+          "name": "Thompson v. Greenacre Estates",
+          "decision_date": "1910-06-20",
+          "citations": [
+            {
+              "type": "official",
+              "cite": "75 Ark. 88"
+            }
+          ],
+          "court": {
+            "name": "Arkansas Supreme Court"
+          },
+          "source": "Caselaw Access Project sample \u2014 https://case.law/",
+          "casebody": {
+            "opinions": [
+              {
+                "type": "majority",
+                "text": "Specific performance granted. Land is unique; the buyer demonstrated readiness to close and the contract identified the tract with certainty."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "relevance_score": 7.9725,
+        "cap_id": "cap-sample-001",
+        "citation": "71 Ark. 194 (1902)",
+        "name": "Smith v. Jones Mercantile Co.",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1902-03-15",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": [
+          "breach of contract",
+          "damages",
+          "anticipatory breach"
+        ],
+        "headnotes": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+        "snippet": "A refusal to accept goods on the agreed date, without legal excuse, constitutes anticipatory breach. The non-breaching party need not await the performance date to sue.",
+        "source_url": "https://case.law/",
+        "full_case": {
+          "id": "cap-sample-001",
+          "name": "Smith v. Jones Mercantile Co.",
+          "name_abbreviation": "Smith",
+          "decision_date": "1902-03-15",
+          "docket_number": "Sample \u2014 CAP-style excerpt",
+          "first_page": "194",
+          "last_page": "198",
+          "citations": [
+            {
+              "type": "official",
+              "cite": "71 Ark. 194"
+            }
+          ],
+          "court": {
+            "name": "Arkansas Supreme Court",
+            "name_abbreviation": "Ark."
+          },
+          "jurisdiction": {
+            "name": "Arkansas"
+          },
+          "source": "Caselaw Access Project \u2014 sample for Legal Intelligence (https://case.law/)",
+          "casebody": {
+            "opinions": [
+              {
+                "type": "majority",
+                "text": "The buyer's letter of March 1, refusing to accept 500 bales of cotton on March 15, was an anticipatory repudiation. The seller properly resold at market and may recover the contract price differential as expectation damages."
+              }
+            ]
+          },
+          "headnotes": "Anticipatory breach; expectation damages on resale."
+        }
+      },
+      {
+        "relevance_score": 2.9863,
+        "cap_id": "cap-sample-002",
+        "citation": "72 Ark. 310 (1905)",
+        "name": "Williams v. Central Railroad",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1905-11-02",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": false,
+        "legal_issues": [
+          "negligence",
+          "contributory negligence",
+          "damages"
+        ],
+        "headnotes": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
+        "snippet": "The railroad owed a duty of reasonable care at crossings, but the plaintiff's failure to stop, look, and listen when approaching a known dangerous crossing defeats the claim.",
+        "source_url": "https://case.law/",
+        "full_case": {
+          "id": "cap-sample-002",
+          "name": "Williams v. Central Railroad",
+          "decision_date": "1905-11-02",
+          "citations": [
+            {
+              "type": "official",
+              "cite": "72 Ark. 310"
+            }
+          ],
+          "court": {
+            "name": "Arkansas Supreme Court"
+          },
+          "source": "Caselaw Access Project sample \u2014 https://case.law/",
+          "casebody": {
+            "opinions": [
+              {
+                "type": "majority",
+                "text": "Judgment affirmed. Contributory negligence bars recovery where the plaintiff failed to exercise ordinary care at a known dangerous crossing."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "relevance_score": 2.8045,
+        "cap_id": "cap-sample-005",
+        "citation": "80 Ark. 55 (1920)",
+        "name": "Miller v. Pioneer Investments",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1920-09-05",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": false,
+        "legal_issues": [
+          "fraud",
+          "contract rescission",
+          "reliance"
+        ],
+        "headnotes": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+        "snippet": "General puffery about investment returns, without specific false statements of fact, does not establish fraudulent inducement where the buyer had access to financial records.",
+        "source_url": "https://case.law/",
+        "full_case": {
+          "id": "cap-sample-005",
+          "name": "Miller v. Pioneer Investments",
+          "decision_date": "1920-09-05",
+          "citations": [
+            {
+              "type": "official",
+              "cite": "80 Ark. 55"
+            }
+          ],
+          "source": "https://case.law/",
+          "casebody": {
+            "opinions": [
+              {
+                "text": "Puffery insufficient for fraud; judgment for defendant."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "relevance_score": 2.0261,
+        "cap_id": "cap-sample-004",
+        "citation": "78 Ark. 401 (1915)",
+        "name": "Davis v. Ozark Manufacturing",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1915-01-10",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": [
+          "employment contract",
+          "wrongful termination",
+          "damages"
+        ],
+        "headnotes": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+        "snippet": "An at-will presumption does not apply where the parties fixed a one-year term in writing. Summary discharge without cause supports recovery of unpaid wages for the remainder.",
+        "source_url": "https://case.law/",
+        "full_case": {
+          "id": "cap-sample-004",
+          "name": "Davis v. Ozark Manufacturing",
+          "decision_date": "1915-01-10",
+          "citations": [
+            {
+              "type": "official",
+              "cite": "78 Ark. 401"
+            }
+          ],
+          "source": "https://case.law/",
+          "casebody": {
+            "opinions": [
+              {
+                "text": "Wrongful termination during a definite term supports damages for the unexpired period, subject to mitigation."
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 6 CAP precedents.",
+      "Precedent analyst reviewed 6 cases; sample plaintiff win rate: 0.667.",
+      "Outcome predictor: most-likely scenario probability ~0.667 (confidence: low).",
+      "Strategy agent produced 5 win strategies and 4 tactics.",
+      "Filing agent assembled draft filing package for counsel review.",
+      "Critic review (rev 0): score 82.5/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {
+        "agent": "research",
+        "content": "Research agent retrieved 6 CAP precedents."
+      },
+      {
+        "agent": "strategy",
+        "content": "Strategy agent produced 5 win strategies and 4 tactics."
+      },
+      {
+        "agent": "critic",
+        "content": "Critic review (rev 0): score 82.5/100, PASS \u2192 suggested target: strategy. Analysis meets quality thresholds; ready for supervisor approval."
+      }
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 82.5,
+  "revision_count": 0,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 82.5,
+      "approval_threshold": 70.0,
+      "dimension_scores": {
+        "precedents": 85.0,
+        "outcomes": 80.0,
+        "strategy": 82.0
+      },
+      "issues": [],
+      "recommendations": [
+        "Analysis meets quality thresholds; ready for supervisor approval."
+      ],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-2de0c6052b1b"
+}
