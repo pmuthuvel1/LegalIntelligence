@@ -16,6 +16,10 @@ from app.config import (
     OPENAI_MAX_TOKENS,
     OPENAI_MODEL,
     OPENAI_TIMEOUT,
+    COMPASS_CHAT_MODEL,
+    COMPASS_REASONING_MODEL,
+    COMPASS_EMBEDDING_MODEL,
+    COMPASS_WHISPER_MODEL,
     validate_llm_config,
 )
 from app.exceptions import ConfigurationError, LLMError
@@ -92,14 +96,30 @@ def verify_llm_connectivity(*, force: bool = False) -> None:
     logger.info("LLM connectivity verified for %s", base)
 
 
-def get_chat_model(*, temperature: float = 0.2):
-    """Build ChatOpenAI client; raises if configuration is missing."""
+def get_chat_model(*, temperature: float = 0.2, model_type: str = "chat"):
+    """Build ChatOpenAI client; raises if configuration is missing.
+    
+    Args:
+        temperature: Temperature for generation (0.0-2.0)
+        model_type: Type of model - "chat" (default), "reasoning", or specific model name
+    """
     validate_llm_config()
 
     from langchain_openai import ChatOpenAI
 
+    # Select the appropriate model based on model_type
+    if model_type == "reasoning":
+        model_name = COMPASS_REASONING_MODEL
+    elif model_type == "chat":
+        model_name = COMPASS_CHAT_MODEL
+    elif model_type == "embedding":
+        model_name = COMPASS_EMBEDDING_MODEL
+    else:
+        # Treat as explicit model name
+        model_name = model_type
+
     return ChatOpenAI(
-        model=OPENAI_MODEL,
+        model=model_name,
         api_key=OPENAI_API_KEY,
         base_url=OPENAI_BASE_URL.rstrip("/"),
         temperature=temperature,
@@ -113,14 +133,22 @@ def invoke_structured(
     user_payload: dict[str, Any],
     *,
     temperature: float = 0.2,
+    model_type: str = "chat",
 ) -> str:
-    """Call the LLM and return text content; raises on config or runtime failure."""
+    """Call the LLM and return text content; raises on config or runtime failure.
+    
+    Args:
+        system_prompt: System prompt for the LLM
+        user_payload: User input payload (will be JSON-serialized)
+        temperature: Temperature for generation
+        model_type: Type of model - "chat", "reasoning", or specific model name
+    """
     verify_llm_connectivity()
 
     from langchain_core.messages import HumanMessage, SystemMessage
 
     try:
-        model = get_chat_model(temperature=temperature)
+        model = get_chat_model(temperature=temperature, model_type=model_type)
         messages = [
             SystemMessage(content=system_prompt),
             HumanMessage(content=json.dumps(user_payload, indent=2, default=str)),
@@ -164,12 +192,21 @@ def invoke_json(
     user_payload: dict[str, Any],
     *,
     temperature: float = 0.2,
+    model_type: str = "chat",
 ) -> dict[str, Any]:
-    """Call the LLM and parse a JSON object; raises on failure."""
+    """Call the LLM and parse a JSON object; raises on failure.
+    
+    Args:
+        system_prompt: System prompt for the LLM
+        user_payload: User input payload (will be JSON-serialized)
+        temperature: Temperature for generation
+        model_type: Type of model - "chat", "reasoning", or specific model name
+    """
     raw = invoke_structured(
         system_prompt + "\n\nRespond with valid JSON only.",
         user_payload,
         temperature=temperature,
+        model_type=model_type,
     )
     return _extract_json_block(raw)
 

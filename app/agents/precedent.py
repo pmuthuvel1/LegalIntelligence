@@ -72,6 +72,7 @@ def precedent_analyst_agent(state: LegalCaseState) -> dict[str, Any]:
             "risk_factors (list). Base analysis only on provided precedents."
         ),
         {"case": case, "precedents": analyzed},
+        model_type="reasoning",
     )
 
     analysis: dict[str, Any] = {

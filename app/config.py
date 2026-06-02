@@ -28,6 +28,13 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 OPENAI_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "60"))
 OPENAI_MAX_TOKENS = int(os.getenv("OPENAI_MAX_TOKENS", "2048"))
 
+# COMPASS Model Selection
+COMPASS_CHAT_MODEL = os.getenv("COMPASS_CHAT_MODEL", "gpt-4o-mini")
+COMPASS_REASONING_MODEL = os.getenv("COMPASS_REASONING_MODEL", "gpt-4o")
+COMPASS_EMBEDDING_MODEL = os.getenv("COMPASS_EMBEDDING_MODEL", "text-embedding-3-large")
+COMPASS_WHISPER_MODEL = os.getenv("COMPASS_WHISPER_MODEL", "whisper-1")
+SAMPLE_MODE = os.getenv("SAMPLE_MODE", "false").lower() == "true"
+
 COURTLISTENER_API_TOKEN = os.getenv("COURTLISTENER_API_TOKEN", "")
 COURTLISTENER_BASE = os.getenv(
     "COURTLISTENER_API_BASE", "https://www.courtlistener.com/api/rest/v4"

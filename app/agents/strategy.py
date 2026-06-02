@@ -74,6 +74,7 @@ def strategy_agent(state: LegalCaseState) -> dict[str, Any]:
                 "critique": critique,
             },
             temperature=0.3,
+            model_type="reasoning",
         )
     )
 
@@ -87,6 +88,7 @@ def strategy_agent(state: LegalCaseState) -> dict[str, Any]:
         ),
         {"case": case, "predicted_outcomes": predicted, "strategies": strategies},
         temperature=0.3,
+        model_type="reasoning",
     )
     tactics = tactic_out.get("tactics")
     if not isinstance(tactics, list) or not tactics:

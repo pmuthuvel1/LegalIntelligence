@@ -60,6 +60,7 @@ def outcome_predictor_agent(state: LegalCaseState) -> dict[str, Any]:
             "party_role": role,
         },
         temperature=0.2,
+        model_type="reasoning",
     )
 
     scenarios = llm_out.get("scenarios")

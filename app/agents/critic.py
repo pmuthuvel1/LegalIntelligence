@@ -148,6 +148,7 @@ def critic_agent(state: LegalCaseState) -> dict[str, Any]:
             "baseline_scores": baseline,
         },
         temperature=0.2,
+        model_type="reasoning",
     )
 
     quality_score = float(llm_review.get("quality_score", baseline_score))
