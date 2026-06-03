@@ -112,10 +112,6 @@ def mock_llm_for_tests(request):
         return
 
     with ExitStack() as stack:
-        stack.enter_context(patch("app.llm.verify_llm_connectivity"))
-        stack.enter_context(patch("app.service.verify_llm_connectivity"))
-        stack.enter_context(patch("app.service.validate_llm_config"))
-        stack.enter_context(patch("app.config.validate_llm_config"))
         for target in _INVOKE_JSON_PATCHES:
             stack.enter_context(patch(target, side_effect=_mock_invoke_json))
         for target in _INVOKE_STRUCTURED_PATCHES:

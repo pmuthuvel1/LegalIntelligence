@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from app.agents.messages import agent_message
@@ -148,7 +149,7 @@ def critic_agent(state: LegalCaseState) -> dict[str, Any]:
             "baseline_scores": baseline,
         },
         temperature=0.2,
-        model_type="reasoning",
+        model_name=os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1"),
     )
 
     quality_score = float(llm_review.get("quality_score", baseline_score))

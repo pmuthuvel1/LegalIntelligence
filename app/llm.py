@@ -1,130 +1,95 @@
-"""LLM client — requires OPENAI_API_KEY and OPENAI_BASE_URL; fails if unreachable."""
+"""LLM client for Compass API — requires OPENAI_API_KEY and OPENAI_BASE_URL."""
 
 from __future__ import annotations
 
 import json
 import logging
+import os
 import re
+from functools import lru_cache
 from typing import Any
 
-import httpx
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
-from app.config import (
-    LEGAL_DISCLAIMER,
-    OPENAI_API_KEY,
-    OPENAI_BASE_URL,
-    OPENAI_MAX_TOKENS,
-    OPENAI_MODEL,
-    OPENAI_TIMEOUT,
-    COMPASS_CHAT_MODEL,
-    COMPASS_REASONING_MODEL,
-    COMPASS_EMBEDDING_MODEL,
-    COMPASS_WHISPER_MODEL,
-    validate_llm_config,
-)
 from app.exceptions import ConfigurationError, LLMError
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-_llm_verified = False
+LEGAL_DISCLAIMER = (
+    "This system provides legal information and research assistance only. "
+    "It is not a law firm, does not provide legal advice, and does not "
+    "create an attorney-client relationship. Outcomes, strategies, and "
+    "predictions are probabilistic estimates based on historical cases from "
+    "the Caselaw Access Project (https://case.law/) and may be incomplete or "
+    "incorrect. Consult a licensed attorney in your jurisdiction before filing "
+    "or relying on any output."
+)
+
+
+def _required_env(name: str) -> str:
+    """Get required environment variable or raise RuntimeError."""
+    value = os.getenv(name)
+    if not value:
+        raise ConfigurationError(
+            f"Missing required environment variable: {name}. "
+            f"Set it in your .env file or pass it at runtime."
+        )
+    return value
 
 
 def llm_available() -> bool:
     """True when both required LLM settings are present (does not check connectivity)."""
-    return bool(OPENAI_API_KEY and OPENAI_BASE_URL)
+    return bool(os.getenv("OPENAI_API_KEY") and os.getenv("OPENAI_BASE_URL"))
 
 
-def verify_llm_connectivity(*, force: bool = False) -> None:
+@lru_cache
+def get_chat_model(model_name: str | None = None, temperature: float = 0.2) -> ChatOpenAI:
     """
-    Validate credentials and confirm the OpenAI-compatible endpoint responds.
-
-    Raises ConfigurationError for missing/invalid config or auth failures.
-    Raises LLMError when the endpoint cannot be reached.
-    """
-    global _llm_verified
-    if _llm_verified and not force:
-        return
-
-    validate_llm_config()
-
-    base = OPENAI_BASE_URL.rstrip("/")
-    headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
-    models_url = f"{base}/models"
-    connect_timeout = min(OPENAI_TIMEOUT, 15.0)
-
-    try:
-        with httpx.Client(timeout=connect_timeout) as client:
-            resp = client.get(models_url, headers=headers)
-    except httpx.RequestError as exc:
-        raise LLMError(
-            f"OPENAI_BASE_URL not reachable at {models_url}: {exc}"
-        ) from exc
-
-    if resp.status_code == 401:
-        raise ConfigurationError(
-            "OPENAI_API_KEY was rejected by the LLM endpoint (HTTP 401 Unauthorized)."
-        )
-    if resp.status_code == 403:
-        raise ConfigurationError(
-            "OPENAI_API_KEY lacks permission for the LLM endpoint (HTTP 403 Forbidden)."
-        )
-    if resp.status_code >= 500:
-        raise LLMError(
-            f"LLM endpoint error at {models_url} (HTTP {resp.status_code})."
-        )
-    if resp.status_code == 404:
-        # Some compatible servers omit /models; verify base URL responds.
-        try:
-            with httpx.Client(timeout=connect_timeout) as client:
-                base_resp = client.get(base, headers=headers)
-        except httpx.RequestError as exc:
-            raise LLMError(f"OPENAI_BASE_URL not reachable at {base}: {exc}") from exc
-        if base_resp.status_code >= 500:
-            raise LLMError(
-                f"LLM endpoint error at {base} (HTTP {base_resp.status_code})."
-            )
-        if base_resp.status_code in (401, 403):
-            raise ConfigurationError(
-                f"OPENAI_API_KEY rejected by LLM endpoint (HTTP {base_resp.status_code})."
-            )
-    elif resp.status_code >= 400:
-        raise LLMError(
-            f"Unexpected response from LLM endpoint {models_url} (HTTP {resp.status_code})."
-        )
-
-    _llm_verified = True
-    logger.info("LLM connectivity verified for %s", base)
-
-
-def get_chat_model(*, temperature: float = 0.2, model_type: str = "chat"):
-    """Build ChatOpenAI client; raises if configuration is missing.
+    Returns a LangChain ChatOpenAI client configured for Compass.
     
     Args:
+        model_name: Model name (defaults to OPENAI_MODEL env var)
         temperature: Temperature for generation (0.0-2.0)
-        model_type: Type of model - "chat" (default), "reasoning", or specific model name
     """
-    validate_llm_config()
-
-    from langchain_openai import ChatOpenAI
-
-    # Select the appropriate model based on model_type
-    if model_type == "reasoning":
-        model_name = COMPASS_REASONING_MODEL
-    elif model_type == "chat":
-        model_name = COMPASS_CHAT_MODEL
-    elif model_type == "embedding":
-        model_name = COMPASS_EMBEDDING_MODEL
-    else:
-        # Treat as explicit model name
-        model_name = model_type
-
+    api_key = _required_env("OPENAI_API_KEY")
+    base_url = _required_env("OPENAI_BASE_URL")
+    model = model_name or os.getenv("OPENAI_MODEL", "gpt-4.1")
+    
     return ChatOpenAI(
-        model=model_name,
-        api_key=OPENAI_API_KEY,
-        base_url=OPENAI_BASE_URL.rstrip("/"),
+        model=model,
+        api_key=api_key,
+        base_url=base_url.rstrip("/"),
         temperature=temperature,
-        timeout=OPENAI_TIMEOUT,
-        max_tokens=OPENAI_MAX_TOKENS,
+        timeout=60,
+        max_retries=2,
+    )
+
+
+@lru_cache
+def get_reasoning_model() -> ChatOpenAI:
+    """
+    Use Compass reasoning model for complex reasoning steps.
+    This helps manage quota responsibly.
+    """
+    return get_chat_model(
+        model_name=os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1"),
+    )
+
+
+@lru_cache
+def get_embedding_model() -> OpenAIEmbeddings:
+    """
+    Returns Compass embeddings for RAG workflows.
+    """
+    api_key = _required_env("OPENAI_API_KEY")
+    base_url = _required_env("OPENAI_BASE_URL")
+    return OpenAIEmbeddings(
+        model=os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large"),
+        api_key=api_key,
+        base_url=base_url.rstrip("/"),
     )
 
 
@@ -133,7 +98,7 @@ def invoke_structured(
     user_payload: dict[str, Any],
     *,
     temperature: float = 0.2,
-    model_type: str = "chat",
+    model_name: str | None = None,
 ) -> str:
     """Call the LLM and return text content; raises on config or runtime failure.
     
@@ -141,20 +106,18 @@ def invoke_structured(
         system_prompt: System prompt for the LLM
         user_payload: User input payload (will be JSON-serialized)
         temperature: Temperature for generation
-        model_type: Type of model - "chat", "reasoning", or specific model name
+        model_name: Model name (defaults to OPENAI_MODEL)
     """
-    verify_llm_connectivity()
-
     from langchain_core.messages import HumanMessage, SystemMessage
 
     try:
-        model = get_chat_model(temperature=temperature, model_type=model_type)
+        model = get_chat_model(model_name=model_name, temperature=temperature)
         messages = [
             SystemMessage(content=system_prompt),
             HumanMessage(content=json.dumps(user_payload, indent=2, default=str)),
         ]
         response = model.invoke(messages)
-    except (ConfigurationError, LLMError):
+    except ConfigurationError:
         raise
     except Exception as exc:
         raise LLMError(f"LLM request failed: {exc}") from exc
@@ -192,7 +155,7 @@ def invoke_json(
     user_payload: dict[str, Any],
     *,
     temperature: float = 0.2,
-    model_type: str = "chat",
+    model_name: str | None = None,
 ) -> dict[str, Any]:
     """Call the LLM and parse a JSON object; raises on failure.
     
@@ -200,13 +163,13 @@ def invoke_json(
         system_prompt: System prompt for the LLM
         user_payload: User input payload (will be JSON-serialized)
         temperature: Temperature for generation
-        model_type: Type of model - "chat", "reasoning", or specific model name
+        model_name: Model name (defaults to OPENAI_MODEL)
     """
     raw = invoke_structured(
         system_prompt + "\n\nRespond with valid JSON only.",
         user_payload,
         temperature=temperature,
-        model_type=model_type,
+        model_name=model_name,
     )
     return _extract_json_block(raw)
 

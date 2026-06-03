@@ -4,11 +4,8 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from urllib.parse import urlparse
 
 from dotenv import load_dotenv
-
-from app.exceptions import ConfigurationError
 
 load_dotenv()
 
@@ -22,19 +19,15 @@ APP_ENV = os.getenv("APP_ENV", "development")
 APP_VERSION = os.getenv("APP_VERSION", "2.0.0")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 
+# Compass API configuration (required)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "").strip()
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-OPENAI_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "60"))
-OPENAI_MAX_TOKENS = int(os.getenv("OPENAI_MAX_TOKENS", "2048"))
-
-# COMPASS Model Selection
-COMPASS_CHAT_MODEL = os.getenv("COMPASS_CHAT_MODEL", "gpt-4o-mini")
-COMPASS_REASONING_MODEL = os.getenv("COMPASS_REASONING_MODEL", "gpt-4o")
-COMPASS_EMBEDDING_MODEL = os.getenv("COMPASS_EMBEDDING_MODEL", "text-embedding-3-large")
-COMPASS_WHISPER_MODEL = os.getenv("COMPASS_WHISPER_MODEL", "whisper-1")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1")
+OPENAI_REASONING_MODEL = os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1")
+OPENAI_EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
 SAMPLE_MODE = os.getenv("SAMPLE_MODE", "false").lower() == "true"
 
+# Optional: supplemental search via CourtListener (CAP data is hosted there)
 COURTLISTENER_API_TOKEN = os.getenv("COURTLISTENER_API_TOKEN", "")
 COURTLISTENER_BASE = os.getenv(
     "COURTLISTENER_API_BASE", "https://www.courtlistener.com/api/rest/v4"
@@ -62,27 +55,6 @@ LEGAL_DISCLAIMER = (
     "incorrect. Consult a licensed attorney in your jurisdiction before filing "
     "or relying on any output."
 )
-
-
-def validate_llm_config() -> None:
-    """Raise ConfigurationError if required LLM environment variables are missing."""
-    missing: list[str] = []
-    if not OPENAI_API_KEY:
-        missing.append("OPENAI_API_KEY")
-    if not OPENAI_BASE_URL:
-        missing.append("OPENAI_BASE_URL")
-    if missing:
-        raise ConfigurationError(
-            f"Required LLM configuration missing: {', '.join(missing)}. "
-            "Set both OPENAI_API_KEY and OPENAI_BASE_URL in the environment or .env file."
-        )
-
-    parsed = urlparse(OPENAI_BASE_URL)
-    if parsed.scheme not in ("http", "https") or not parsed.netloc:
-        raise ConfigurationError(
-            f"OPENAI_BASE_URL is invalid: {OPENAI_BASE_URL!r}. "
-            "Expected a full URL such as https://api.openai.com/v1"
-        )
 
 
 def validate_config() -> list[str]:

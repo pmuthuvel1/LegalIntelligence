@@ -2,23 +2,21 @@
 
 from unittest.mock import MagicMock, patch
 
-import httpx
 import pytest
 
 from app import llm
-from app.config import validate_llm_config
-from app.exceptions import ConfigurationError, LLMError
+from app.exceptions import ConfigurationError
 
 
 @pytest.mark.no_llm_mock
 def test_get_chat_model_passes_base_url():
-    with patch("app.config.OPENAI_API_KEY", "test-key"), patch(
-        "app.config.OPENAI_BASE_URL", "https://api.example.com/v1"
-    ), patch.object(llm, "OPENAI_API_KEY", "test-key"), patch.object(
-        llm, "OPENAI_BASE_URL", "https://api.example.com/v1"
-    ), patch.object(llm, "OPENAI_MODEL", "gpt-test"), patch(
-        "langchain_openai.ChatOpenAI"
-    ) as mock_chat:
+    with patch.dict("os.environ", {
+        "OPENAI_API_KEY": "test-key",
+        "OPENAI_BASE_URL": "https://api.example.com/v1",
+        "OPENAI_MODEL": "gpt-test",
+    }), patch("langchain_openai.ChatOpenAI") as mock_chat:
+        # Clear the lru_cache before calling
+        llm.get_chat_model.cache_clear()
         llm.get_chat_model()
         kwargs = mock_chat.call_args.kwargs
         assert kwargs["api_key"] == "test-key"
@@ -32,44 +30,32 @@ def test_invoke_json_parses_fenced_json():
 
 
 @pytest.mark.no_llm_mock
-def test_validate_llm_config_missing_key():
-    with patch("app.config.OPENAI_API_KEY", ""), patch(
-        "app.config.OPENAI_BASE_URL", "https://api.example.com/v1"
-    ):
-        with pytest.raises(ConfigurationError, match="OPENAI_API_KEY"):
-            validate_llm_config()
+def test_required_env_missing():
+    with patch.dict("os.environ", {}, clear=True):
+        with pytest.raises(ConfigurationError, match="Missing required environment variable"):
+            llm._required_env("NONEXISTENT")
 
 
 @pytest.mark.no_llm_mock
-def test_validate_llm_config_missing_base_url():
-    with patch("app.config.OPENAI_API_KEY", "sk-test"), patch("app.config.OPENAI_BASE_URL", ""):
-        with pytest.raises(ConfigurationError, match="OPENAI_BASE_URL"):
-            validate_llm_config()
+def test_llm_available_with_both_env_vars():
+    with patch.dict("os.environ", {
+        "OPENAI_API_KEY": "test-key",
+        "OPENAI_BASE_URL": "https://api.example.com/v1",
+    }):
+        assert llm.llm_available() is True
 
 
 @pytest.mark.no_llm_mock
-def test_verify_llm_connectivity_unreachable():
-    with patch.object(llm, "_llm_verified", False), patch(
-        "app.config.OPENAI_API_KEY", "sk-test"
-    ), patch("app.config.OPENAI_BASE_URL", "https://api.example.com/v1"), patch(
-        "httpx.Client"
-    ) as mock_client:
-        mock_client.return_value.__enter__.return_value.get.side_effect = httpx.ConnectError(
-            "Connection refused", request=MagicMock()
-        )
-        with pytest.raises(LLMError, match="not reachable"):
-            llm.verify_llm_connectivity(force=True)
+def test_llm_available_missing_key():
+    with patch.dict("os.environ", {
+        "OPENAI_BASE_URL": "https://api.example.com/v1",
+    }, clear=True):
+        assert llm.llm_available() is False
 
 
 @pytest.mark.no_llm_mock
-def test_verify_llm_connectivity_unauthorized():
-    with patch.object(llm, "_llm_verified", False), patch(
-        "app.config.OPENAI_API_KEY", "bad-key"
-    ), patch("app.config.OPENAI_BASE_URL", "https://api.example.com/v1"), patch(
-        "httpx.Client"
-    ) as mock_client:
-        mock_resp = MagicMock()
-        mock_resp.status_code = 401
-        mock_client.return_value.__enter__.return_value.get.return_value = mock_resp
-        with pytest.raises(ConfigurationError, match="401"):
-            llm.verify_llm_connectivity(force=True)
+def test_llm_available_missing_base_url():
+    with patch.dict("os.environ", {
+        "OPENAI_API_KEY": "test-key",
+    }, clear=True):
+        assert llm.llm_available() is False

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from app.agents.messages import agent_message
@@ -60,7 +61,7 @@ def outcome_predictor_agent(state: LegalCaseState) -> dict[str, Any]:
             "party_role": role,
         },
         temperature=0.2,
-        model_type="reasoning",
+        model_name=os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1"),
     )
 
     scenarios = llm_out.get("scenarios")

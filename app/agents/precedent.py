@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections import Counter
 from typing import Any
 
@@ -72,7 +73,7 @@ def precedent_analyst_agent(state: LegalCaseState) -> dict[str, Any]:
             "risk_factors (list). Base analysis only on provided precedents."
         ),
         {"case": case, "precedents": analyzed},
-        model_type="reasoning",
+        model_name=os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1"),
     )
 
     analysis: dict[str, Any] = {

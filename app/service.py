@@ -10,19 +10,22 @@ from typing import Any
 
 from langchain_core.messages import message_to_dict
 
-from app.config import LOGS_DIR, validate_config, validate_llm_config
+from app.config import LOGS_DIR, validate_config
 from app.exceptions import AnalysisError, ConfigurationError, LLMError
 from app.graph import LEGAL_GRAPH
-from app.llm import verify_llm_connectivity
+from app.llm import llm_available
 from app.tools.registry import is_warmed, warmup
 
 logger = logging.getLogger(__name__)
 
 
 def _ensure_llm_ready() -> None:
-    """Validate LLM config and connectivity before running agents."""
-    validate_llm_config()
-    verify_llm_connectivity()
+    """Validate LLM configuration is available."""
+    if not llm_available():
+        raise ConfigurationError(
+            "Required LLM configuration missing: OPENAI_API_KEY and OPENAI_BASE_URL. "
+            "Set both in the environment or .env file."
+        )
 
 
 def initialize() -> dict[str, Any]:
