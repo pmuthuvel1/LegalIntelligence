@@ -2,12 +2,13 @@
 
 from __future__ import annotations
 
-import os
 from typing import Any
 
 from app.agents.messages import agent_message
-from app.config import CRITIQUE_APPROVAL_THRESHOLD
+from app.compass import reasoning_model_name
+from app.config import CRITIQUE_APPROVAL_THRESHOLD, ESCALATION_QUALITY_THRESHOLD
 from app.llm import invoke_json
+from app.logging_utils import log_event
 from app.state import LegalCaseState, RewriteTarget
 
 
@@ -123,6 +124,28 @@ def critic_agent(state: LegalCaseState) -> dict[str, Any]:
     o_score, o_issues = _score_outcomes(predicted, analysis)
     s_score, s_issues = _score_strategy(strategies, analysis)
 
+    # Dynamic delegation: if precedent coverage is weak, surface an explicit
+    # "request_more_evidence" span targeting the research agent. The supervisor
+    # is still the routing authority, but this makes the planner→retriever
+    # request visible in the trace before the supervisor delegates.
+    if p_score < 70.0:
+        log_event(
+            state,
+            agent_name="critic",
+            action="request_more_evidence",
+            target_agent="research",
+            confidence=round(p_score / 100.0, 4),
+            output_summary=(
+                f"precedent coverage weak (score {p_score}, "
+                f"count {analysis.get('precedent_count', 0)}); "
+                "requesting broader retrieval"
+            ),
+            extra={
+                "precedent_count": analysis.get("precedent_count", 0),
+                "dimension_score": p_score,
+            },
+        )
+
     all_issues = p_issues + o_issues + s_issues
     baseline_score = round((p_score * 0.35 + o_score * 0.30 + s_score * 0.35), 1)
     rewrite_target = _pick_rewrite_target(all_issues)
@@ -149,7 +172,7 @@ def critic_agent(state: LegalCaseState) -> dict[str, Any]:
             "baseline_scores": baseline,
         },
         temperature=0.2,
-        model_name=os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1"),
+        model_name=reasoning_model_name(),
     )
 
     quality_score = float(llm_review.get("quality_score", baseline_score))
@@ -176,10 +199,60 @@ def critic_agent(state: LegalCaseState) -> dict[str, Any]:
         "llm_critique": True,
     }
 
+    # ---- Validation event for every peer review run ----
+    log_event(
+        state,
+        agent_name="critic",
+        action="validate",
+        target_agent="supervisor",
+        confidence=round(quality_score / 100.0, 4),
+        extra={
+            "dimension_scores": baseline["dimension_scores"],
+            "issue_count": len(all_issues),
+            "critical_issues": sum(
+                1 for i in all_issues if i.get("severity") == "critical"
+            ),
+            "approved": critique_report["approved_by_critic"],
+        },
+    )
+
+    # ---- Escalation when confidence/quality is low ----
+    predicted_confidence = (state.get("predicted_outcomes") or {}).get("confidence")
+    escalation_reasons: list[str] = []
+    if quality_score < ESCALATION_QUALITY_THRESHOLD:
+        escalation_reasons.append(
+            f"Quality score {quality_score} below escalation threshold "
+            f"{ESCALATION_QUALITY_THRESHOLD}."
+        )
+    if predicted_confidence == "very_low":
+        escalation_reasons.append(
+            "Outcome predictor reported very_low confidence."
+        )
+    critical_count = sum(
+        1 for i in all_issues if i.get("severity") == "critical"
+    )
+    if critical_count >= 2:
+        escalation_reasons.append(
+            f"{critical_count} critical issues raised in peer review."
+        )
+
+    needs_escalation = bool(escalation_reasons)
+    if needs_escalation:
+        log_event(
+            state,
+            agent_name="critic",
+            action="escalate",
+            target_agent="supervisor",
+            confidence=round(quality_score / 100.0, 4),
+            output_summary="; ".join(escalation_reasons),
+            extra={"reasons": escalation_reasons},
+        )
+
     summary = (
         f"Critic review (rev {revision}): score {quality_score}/100, "
         f"{'PASS' if critique_report['approved_by_critic'] else 'NEEDS REVISION'} "
         f"→ {rewrite_target}. LLM peer review applied."
+        + (" ESCALATED to supervisor." if needs_escalation else "")
     )
 
     return {
@@ -187,6 +260,8 @@ def critic_agent(state: LegalCaseState) -> dict[str, Any]:
         "critique_history": [critique_report],
         "quality_score": quality_score,
         "rewrite_target": rewrite_target,
+        "needs_escalation": needs_escalation,
+        "escalation_reasons": escalation_reasons,
         "messages": [agent_message("critic", summary)],
         "agent_notes": [summary],
     }
