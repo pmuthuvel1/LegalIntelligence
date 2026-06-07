@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any
 
 from app.agents.messages import agent_message
+from app.compass import reasoning_model_name
 from app.exceptions import LLMError
 from app.llm import invoke_json
 from app.state import LegalCaseState
@@ -74,7 +75,7 @@ def strategy_agent(state: LegalCaseState) -> dict[str, Any]:
                 "critique": critique,
             },
             temperature=0.3,
-            model_type="reasoning",
+            model_name=reasoning_model_name(),
         )
     )
 
@@ -88,7 +89,7 @@ def strategy_agent(state: LegalCaseState) -> dict[str, Any]:
         ),
         {"case": case, "predicted_outcomes": predicted, "strategies": strategies},
         temperature=0.3,
-        model_type="reasoning",
+        model_name=reasoning_model_name(),
     )
     tactics = tactic_out.get("tactics")
     if not isinstance(tactics, list) or not tactics:
