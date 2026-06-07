@@ -1,86 +1,96 @@
-"""Filing agent: assemble a practical pre-filing package (not filed on your behalf)."""
+"""Intake agent: validate and structure a case for downstream agents."""
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from typing import Any
 
 from app.agents.messages import agent_message
-from app.exceptions import LLMError
 from app.llm import invoke_json
 from app.state import LegalCaseState
 
 
-def _complaint_outline(case: dict[str, Any], facts_section: str) -> list[dict[str, str]]:
-    parties = case.get("parties") or {}
-    return [
-        {"section": "Caption", "content": f"{parties.get('plaintiff')} v. {parties.get('defendant')}"},
-        {"section": "Jurisdiction & Venue", "content": f"{case.get('jurisdiction')} — {case.get('venue') or 'TBD'}"},
-        {"section": "Parties", "content": f"Plaintiff: {parties.get('plaintiff')}; Defendant: {parties.get('defendant')}"},
-        {"section": "Claims for Relief", "content": "; ".join(case.get("claims") or [])},
-        {"section": "Statement of Facts", "content": facts_section},
-        {
-            "section": "Prayer for Relief",
-            "content": "; ".join(case.get("relief_sought") or ["Damages and other appropriate relief"]),
-        },
-    ]
+REQUIRED_FIELDS = ("title", "jurisdiction", "court_type", "parties", "claims")
 
 
-def filing_agent(state: LegalCaseState) -> dict[str, Any]:
-    case = state.get("structured_case") or {}
-    precedents = state.get("retrieved_precedents") or []
+def _normalize_parties(parties: Any) -> dict[str, str]:
+    if isinstance(parties, dict):
+        return {
+            "plaintiff": str(parties.get("plaintiff", "")).strip(),
+            "defendant": str(parties.get("defendant", "")).strip(),
+        }
+    return {"plaintiff": "", "defendant": ""}
 
-    draft = invoke_json(
+
+def _llm_enrich_structured(raw: dict[str, Any], structured: dict[str, Any]) -> dict[str, Any]:
+    result = invoke_json(
         (
-            "You are a litigation drafting assistant. Return JSON with keys: "
-            "statement_of_facts (numbered fact paragraphs as a single string), "
-            "pre_filing_checklist (list of jurisdiction-specific checklist items). "
-            "Use only facts from the input; mark gaps as [VERIFY]."
+            "You are a legal intake specialist. Given raw case input, return JSON with keys: "
+            "legal_issues (list of strings), key_facts (refined list), "
+            "claims (refined list), intake_summary (one sentence). "
+            "Do not invent facts not supported by the input."
         ),
-        {"case": case, "key_precedents": precedents[:3]},
-        temperature=0.2,
+        {"raw_input": raw, "draft": structured},
+        temperature=0.1,
     )
+    if result.get("legal_issues"):
+        structured["legal_issues"] = result["legal_issues"]
+    if result.get("key_facts"):
+        structured["key_facts"] = result["key_facts"]
+    if result.get("claims"):
+        structured["claims"] = result["claims"]
+    if result.get("intake_summary"):
+        structured["intake_summary"] = result["intake_summary"]
+    return structured
 
-    facts_section = draft.get("statement_of_facts")
-    checklist = draft.get("pre_filing_checklist")
-    if not facts_section:
-        raise LLMError("Filing agent: LLM did not return statement_of_facts.")
-    if not isinstance(checklist, list) or not checklist:
-        raise LLMError("Filing agent: LLM did not return pre_filing_checklist.")
 
-    exhibits = [
-        {"id": "Exhibit A", "description": "Chronology of material events"},
-        {"id": "Exhibit B", "description": "Operative contract and referenced clauses"},
-        {"id": "Exhibit C", "description": "Correspondence showing notice and breach"},
-    ]
-    for idx, p in enumerate(precedents[:3], start=4):
-        exhibits.append(
-            {
-                "id": f"Exhibit {chr(64 + idx)}",
-                "description": f"Key precedent: {p.get('citation') or p.get('name')}",
-            }
-        )
+def intake_agent(state: LegalCaseState) -> dict[str, Any]:
+    raw = state.get("case_input") or {}
+    errors: list[str] = []
 
-    package = {
-        "status": "draft_for_attorney_review",
-        "complaint_outline": _complaint_outline(case, facts_section),
-        "proposed_exhibits": exhibits,
-        "pre_filing_checklist": checklist,
-        "how_to_file": {
-            "steps": [
-                f"Open e-filing portal for {case.get('court_type', 'target court')}.",
-                "Select complaint initiating civil action.",
-                "Upload PDF with embedded exhibits; pay filing fee.",
-                "Serve defendant per Rule 4 / local equivalent within required period.",
-            ],
-            "note": "This system does not e-file on your behalf.",
-        },
-        "llm_drafted": True,
+    for field in REQUIRED_FIELDS:
+        if not raw.get(field):
+            errors.append(f"Missing required field: {field}")
+
+    parties = _normalize_parties(raw.get("parties"))
+    if not parties["plaintiff"] or not parties["defendant"]:
+        errors.append("Both plaintiff and defendant must be specified.")
+
+    claims = raw.get("claims") or []
+    if not isinstance(claims, list) or not claims:
+        errors.append("At least one claim or cause of action is required.")
+
+    relief = raw.get("relief_sought") or []
+    facts = raw.get("key_facts") or []
+    clauses = raw.get("contract_clauses") or raw.get("sample_clauses") or []
+
+    structured = {
+        "case_id": raw.get("case_id") or f"CASE-{datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S')}",
+        "title": raw.get("title", "").strip(),
+        "jurisdiction": raw.get("jurisdiction", "").strip(),
+        "court_type": raw.get("court_type", "").strip(),
+        "venue": raw.get("venue", "").strip(),
+        "parties": parties,
+        "claims": [str(c).strip() for c in claims],
+        "legal_issues": [str(i).strip() for i in (raw.get("legal_issues") or claims)],
+        "relief_sought": [str(r).strip() for r in relief] if isinstance(relief, list) else [str(relief)],
+        "key_facts": [str(f).strip() for f in facts] if isinstance(facts, list) else [str(facts)],
+        "contract_clauses": clauses if isinstance(clauses, list) else [str(clauses)],
+        "procedural_posture": raw.get("procedural_posture", "pre-filing"),
+        "your_role": raw.get("your_role", "plaintiff"),
+        "intake_timestamp": datetime.now(timezone.utc).isoformat(),
     }
 
-    note = "Filing agent assembled draft filing package with LLM-drafted facts."
+    if not errors:
+        structured = _llm_enrich_structured(raw, structured)
+
+    note = "Intake agent structured the matter (LLM-enriched)."
+    if errors:
+        note += f" Warnings: {'; '.join(errors)}"
 
     return {
-        "filing_package": package,
+        "structured_case": structured,
+        "errors": errors,
         "agent_notes": [note],
-        "messages": [agent_message("filing", note)],
+        "messages": [agent_message("intake", note)],
     }
