@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-import os
 from collections import Counter
 from typing import Any
 
 from app.agents.messages import agent_message
+from app.compass import reasoning_model_name
 from app.llm import invoke_json, invoke_structured
 from app.state import LegalCaseState
 
@@ -73,7 +73,7 @@ def precedent_analyst_agent(state: LegalCaseState) -> dict[str, Any]:
             "risk_factors (list). Base analysis only on provided precedents."
         ),
         {"case": case, "precedents": analyzed},
-        model_name=os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1"),
+        model_name=reasoning_model_name(),
     )
 
     analysis: dict[str, Any] = {
