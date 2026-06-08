@@ -1,0 +1,302 @@
+{
+  "use_case_id": 21,
+  "report": {
+    "generated_at": "2026-06-07T15:12:18.221000+00:00",
+    "case_id": "DEMO-QM-006",
+    "title": "Brown Contracting v. City Renovations \u2014 quantum meruit for accepted work",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 84.0,
+    "revision_count": 0,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 84.0,
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 84.0,
+        "approval_threshold": 70.0,
+        "dimension_scores": {"precedents": 88.0, "outcomes": 82.0, "strategy": 82.0},
+        "issues": [],
+        "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-QM-006",
+      "title": "Brown Contracting v. City Renovations \u2014 quantum meruit for accepted work",
+      "jurisdiction": "Arkansas",
+      "court_type": "Circuit Court",
+      "venue": "Faulkner County",
+      "parties": {"plaintiff": "Brown Contracting Co.", "defendant": "City Renovations Inc."},
+      "claims": ["quantum meruit", "unjust enrichment", "alternative breach of oral subcontract"],
+      "legal_issues": ["statute of frauds", "acceptance of benefit", "reasonable value of services"],
+      "relief_sought": [
+        "Reasonable value of $96,400 in materials and labor furnished",
+        "Prejudgment interest from October 1, 2025",
+        "Costs of suit"
+      ],
+      "key_facts": [
+        "Plaintiff completed framing, drywall, and finish carpentry on defendant's downtown renovation between May and September 2025.",
+        "Parties never executed a written subcontract although a draft circulated by email referenced a $96,400 lump sum.",
+        "Defendant's project manager signed daily inspection logs accepting the work without objection.",
+        "Defendant invoiced the building owner for plaintiff's scope and was paid in full but refused to remit to plaintiff."
+      ],
+      "contract_clauses": [],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-06-07T15:12:18.210000+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 4,
+      "plaintiff_win_rate_in_sample": 0.75,
+      "top_issues_in_corpus": [
+        ["quantum meruit", 2],
+        ["unjust enrichment", 2],
+        ["breach of contract", 1],
+        ["damages", 1],
+        ["statute of frauds", 1]
+      ],
+      "cases": [
+        {
+          "citation": "82 Ark. 220 (1925)",
+          "name": "Brown v. City Contractors",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1925-04-18",
+          "relevance_score": 26.4,
+          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "86 Ark. 311 (1930)",
+          "name": "Hartwell v. Boone Construction",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1930-07-21",
+          "relevance_score": 11.9,
+          "holding_summary": "An owner who knowingly accepts the benefit of a subcontractor's work cannot escape payment by pointing to an unsigned writing.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "71 Ark. 194 (1902)",
+          "name": "Smith v. Jones Mercantile Co.",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1902-03-15",
+          "relevance_score": 4.6,
+          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 1.2,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "82 Ark. 220 (1925)",
+          "name": "Brown v. City Contractors",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1925-04-18",
+          "relevance_score": 26.4,
+          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "86 Ark. 311 (1930)",
+          "name": "Hartwell v. Boone Construction",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1930-07-21",
+          "relevance_score": 11.9,
+          "holding_summary": "An owner who knowingly accepts the benefit of a subcontractor's work cannot escape payment by pointing to an unsigned writing.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": []
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "moderate",
+      "precedent_sample_size": 4,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {"scenario": "most_likely", "description": "Judgment for plaintiff for reasonable value at or near $96,400.", "estimated_probability": 0.72},
+        {"scenario": "best_case", "description": "Full award plus prejudgment interest and costs.", "estimated_probability": 0.55},
+        {"scenario": "worst_case", "description": "Reduction for any disputed change-order items or set-off defenses.", "estimated_probability": 0.18}
+      ],
+      "likely_judgment_summary": "Judgment for plaintiff for reasonable value at or near $96,400.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Lead with Brown v. City Contractors",
+        "actions": [
+          "Open the brief with the Brown rule on quantum meruit.",
+          "Match each work category to inspection logs and material invoices."
+        ],
+        "rationale": "Brown is on-point Arkansas authority; controlling precedent reduces variance."
+      },
+      {
+        "priority": 2,
+        "title": "Prove acceptance and benefit",
+        "actions": [
+          "Authenticate signed daily logs through the project manager.",
+          "Subpoena defendant's pay applications to the building owner showing inclusion of plaintiff's scope."
+        ],
+        "rationale": "Acceptance plus benefit defeats statute-of-frauds objections in quantum meruit."
+      },
+      {
+        "priority": 3,
+        "title": "Establish reasonable value",
+        "actions": [
+          "Retain a construction-cost expert to opine on prevailing labor and material rates.",
+          "Provide vendor invoices and timesheets in support."
+        ],
+        "rationale": "Quantum meruit damages turn on reasonable value, not contract price; expert proof anchors the number."
+      },
+      {
+        "priority": 4,
+        "title": "Plead alternative breach claim",
+        "actions": [
+          "Plead breach of oral subcontract in the alternative.",
+          "Identify performance and acceptance acts that satisfy the partial-performance exception."
+        ],
+        "rationale": "Alternative theories preserve recovery if the court reaches the writing requirement."
+      },
+      {
+        "priority": 5,
+        "title": "Position for early settlement",
+        "actions": [
+          "Send a demand letter attaching key logs and the Brown opinion.",
+          "Offer to mediate before discovery to capture defendant's cost-of-defense calculus."
+        ],
+        "rationale": "Construction quantum meruit cases frequently resolve once acceptance proof is irrefutable."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {"tactic": "Early dispositive framing", "detail": "Move for summary judgment once acceptance and benefit proofs are authenticated."},
+      {"tactic": "Judicial economy narrative", "detail": "Frame the case around a single record set: logs, invoices, and pay applications."},
+      {"tactic": "Remedy calibration", "detail": "Request reasonable value plus interest as primary relief; reserve breach damages as alternative."},
+      {"tactic": "Settlement corridor", "detail": "Use precedent strength to demand near-full recovery in pre-discovery mediation."}
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {"section": "Caption", "content": "Brown Contracting Co. v. City Renovations Inc."},
+        {"section": "Jurisdiction & Venue", "content": "Arkansas \u2014 Faulkner County"},
+        {"section": "Parties", "content": "Plaintiff: Brown Contracting Co.; Defendant: City Renovations Inc."},
+        {"section": "Claims for Relief", "content": "quantum meruit; unjust enrichment; alternative breach of oral subcontract"},
+        {"section": "Statement of Facts", "content": "Numbered paragraphs tracing the scope of work, acceptance through daily logs, and defendant's receipt of payment from the owner."},
+        {"section": "Prayer for Relief", "content": "Reasonable value of $96,400; prejudgment interest from October 1, 2025; costs of suit"}
+      ],
+      "proposed_exhibits": [
+        {"id": "Exhibit A", "description": "Signed daily inspection logs (May-September 2025)"},
+        {"id": "Exhibit B", "description": "Material and labor invoices"},
+        {"id": "Exhibit C", "description": "Email thread circulating the unsigned subcontract draft"},
+        {"id": "Exhibit D", "description": "Defendant's pay applications to building owner"},
+        {"id": "Exhibit E", "description": "Key precedent: 82 Ark. 220 (1925) Brown v. City Contractors"}
+      ],
+      "pre_filing_checklist": [
+        "Confirm five-year statute of limitations for quasi-contract claims in Arkansas.",
+        "Preserve original signed logs in escrow.",
+        "Verify filing fee and e-filing account for Faulkner County Circuit Court.",
+        "Include certificate of service template.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Circuit Court.",
+          "Select complaint initiating civil action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 26.4,
+        "cap_id": "cap-sample-006",
+        "citation": "82 Ark. 220 (1925)",
+        "name": "Brown v. City Contractors",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1925-04-18",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["unjust enrichment", "quantum meruit", "breach of contract"],
+        "headnotes": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+        "snippet": "Subcontractor completed work accepted by the owner; failure to satisfy the statute of frauds does not permit retention of the benefit without payment.",
+        "source_url": "https://case.law/"
+      },
+      {
+        "relevance_score": 11.9,
+        "cap_id": "cap-sample-010",
+        "citation": "86 Ark. 311 (1930)",
+        "name": "Hartwell v. Boone Construction",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1930-07-21",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["quantum meruit", "acceptance of benefit", "construction"],
+        "headnotes": "An owner who knowingly accepts the benefit of a subcontractor's work cannot escape payment by pointing to an unsigned writing.",
+        "snippet": "Acceptance of the completed scope by the general contractor and payment from the owner together compel restitution to the subcontractor.",
+        "source_url": "https://case.law/"
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 4 CAP precedents.",
+      "Precedent analyst reviewed 4 cases; sample plaintiff win rate: 0.75.",
+      "Outcome predictor: most-likely scenario probability ~0.72 (confidence: moderate).",
+      "Strategy agent produced 5 win strategies and 4 tactics.",
+      "Filing agent assembled draft filing package for counsel review.",
+      "Critic review (rev 0): score 84.0/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {"agent": "research", "content": "Research agent retrieved 4 CAP precedents tightly aligned with quantum meruit."},
+      {"agent": "strategy", "content": "Strategy agent produced 5 win strategies anchored on Brown v. City Contractors."},
+      {"agent": "critic", "content": "Critic review (rev 0): score 84.0/100, PASS \u2192 ready for supervisor approval."}
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 84.0,
+  "revision_count": 0,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 84.0,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 88.0, "outcomes": 82.0, "strategy": 82.0},
+      "issues": [],
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-qm-006d3e4f"
+}
+
