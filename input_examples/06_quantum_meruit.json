@@ -1,0 +1,37 @@
+{
+  "use_case_id": 21,
+  "case_id": "DEMO-QM-006",
+  "title": "Brown Contracting v. City Renovations — quantum meruit for accepted work",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Faulkner County",
+  "parties": {
+    "plaintiff": "Brown Contracting Co.",
+    "defendant": "City Renovations Inc."
+  },
+  "claims": [
+    "quantum meruit",
+    "unjust enrichment",
+    "alternative breach of oral subcontract"
+  ],
+  "legal_issues": [
+    "statute of frauds",
+    "acceptance of benefit",
+    "reasonable value of services"
+  ],
+  "relief_sought": [
+    "Reasonable value of $96,400 in materials and labor furnished",
+    "Prejudgment interest from October 1, 2025",
+    "Costs of suit"
+  ],
+  "key_facts": [
+    "Plaintiff completed framing, drywall, and finish carpentry on defendant's downtown renovation between May and September 2025.",
+    "Parties never executed a written subcontract although a draft circulated by email referenced a $96,400 lump sum.",
+    "Defendant's project manager signed daily inspection logs accepting the work without objection.",
+    "Defendant invoiced the building owner for plaintiff's scope and was paid in full but refused to remit to plaintiff."
+  ],
+  "contract_clauses": [],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}
+
