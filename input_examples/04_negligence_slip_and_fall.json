@@ -1,0 +1,36 @@
+{
+  "use_case_id": 21,
+  "case_id": "DEMO-NEG-004",
+  "title": "Patel v. Riverbend Grocers — premises liability slip-and-fall",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Pulaski County",
+  "parties": {
+    "plaintiff": "Anika Patel",
+    "defendant": "Riverbend Grocers Inc."
+  },
+  "claims": [
+    "negligence",
+    "premises liability",
+    "negligent maintenance"
+  ],
+  "legal_issues": [
+    "duty of care to invitees",
+    "constructive notice of hazard",
+    "comparative fault"
+  ],
+  "relief_sought": [
+    "Compensatory damages of $85,000 for medical expenses and lost wages",
+    "Damages for pain and suffering",
+    "Costs of suit"
+  ],
+  "key_facts": [
+    "On July 12, 2025 plaintiff slipped on a leaking refrigerator puddle in aisle 4 of defendant's store.",
+    "Store incident log shows a prior leak report from the same unit two days earlier with no repair ticket.",
+    "Surveillance video captured the puddle existing for at least 47 minutes before the fall."
+  ],
+  "contract_clauses": [],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}
+
