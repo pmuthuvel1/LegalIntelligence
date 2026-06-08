@@ -1,0 +1,311 @@
+{
+  "use_case_id": 21,
+  "report": {
+    "generated_at": "2026-06-07T15:17:14.005000+00:00",
+    "case_id": "DEMO-PART-010",
+    "title": "Whitaker v. Cole \u2014 partnership dissolution and accounting",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 83.5,
+    "revision_count": 0,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 83.5,
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 83.5,
+        "approval_threshold": 70.0,
+        "dimension_scores": {"precedents": 82.0, "outcomes": 84.0, "strategy": 84.5},
+        "issues": [],
+        "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-PART-010",
+      "title": "Whitaker v. Cole \u2014 partnership dissolution and accounting",
+      "jurisdiction": "Arkansas",
+      "court_type": "Chancery Court",
+      "venue": "Garland County",
+      "parties": {"plaintiff": "Elaine Whitaker", "defendant": "Robert Cole"},
+      "claims": ["judicial dissolution of partnership", "breach of fiduciary duty", "accounting and constructive trust"],
+      "legal_issues": [
+        "partner's duty of loyalty and good faith",
+        "self-dealing and undisclosed compensation",
+        "valuation of partnership assets on winding up",
+        "right to formal accounting under partnership statute"
+      ],
+      "relief_sought": [
+        "Decree dissolving Whitaker & Cole Real Estate Partners effective date of judgment",
+        "Formal accounting of all partnership receipts and disbursements from January 1, 2023",
+        "Disgorgement of approximately $310,000 in undisclosed management fees taken by defendant",
+        "Equitable distribution of remaining partnership assets after winding up"
+      ],
+      "key_facts": [
+        "Parties formed a 50/50 general partnership in 2018 to acquire and lease commercial properties.",
+        "Defendant managed day-to-day operations and bank accounts; plaintiff supplied 65% of initial capital.",
+        "Plaintiff discovered in October 2025 that defendant paid himself unbudgeted 'management fees' totaling $310,000 over three years without partner consent.",
+        "Partnership agreement requires unanimous consent for partner compensation above an agreed draw schedule."
+      ],
+      "contract_clauses": [
+        {"name": "Partner compensation", "text": "Neither Partner shall receive salary, fee, or other compensation from the Partnership except as expressly approved in writing by both Partners."},
+        {"name": "Books and records", "text": "Each Partner shall have full access at all times to the Partnership's books, records, and bank accounts."}
+      ],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-06-07T15:17:13.992000+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 4,
+      "plaintiff_win_rate_in_sample": 0.75,
+      "top_issues_in_corpus": [
+        ["fiduciary duty", 2],
+        ["accounting", 2],
+        ["partnership", 2],
+        ["self-dealing", 1],
+        ["damages", 1]
+      ],
+      "cases": [
+        {
+          "citation": "210 Ark. 654 (1946)",
+          "name": "Henderson v. Brookwood Partners",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1946-12-02",
+          "relevance_score": 20.1,
+          "holding_summary": "A managing partner owes the highest duty of loyalty; undisclosed self-dealing requires disgorgement and supports judicial dissolution.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "248 Ark. 91 (1970)",
+          "name": "Calhoun v. Magnolia Group",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1970-05-25",
+          "relevance_score": 12.6,
+          "holding_summary": "A partner is entitled to a formal accounting at any time on showing of necessity; refusal to provide records supports a constructive trust remedy.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "75 Ark. 88 (1910)",
+          "name": "Thompson v. Greenacre Estates",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1910-06-20",
+          "relevance_score": 3.4,
+          "holding_summary": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 1.7,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "210 Ark. 654 (1946)",
+          "name": "Henderson v. Brookwood Partners",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1946-12-02",
+          "relevance_score": 20.1,
+          "holding_summary": "A managing partner owes the highest duty of loyalty; undisclosed self-dealing requires disgorgement and supports judicial dissolution.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "248 Ark. 91 (1970)",
+          "name": "Calhoun v. Magnolia Group",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1970-05-25",
+          "relevance_score": 12.6,
+          "holding_summary": "A partner is entitled to a formal accounting at any time on showing of necessity; refusal to provide records supports a constructive trust remedy.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": []
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "moderate",
+      "precedent_sample_size": 4,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {"scenario": "most_likely", "description": "Court orders dissolution, full accounting, and disgorgement of unauthorized management fees.", "estimated_probability": 0.7},
+        {"scenario": "best_case", "description": "Dissolution plus disgorgement, pre-judgment interest, and capital-contribution adjustments favoring the 65% contributor.", "estimated_probability": 0.45},
+        {"scenario": "worst_case", "description": "Court allows partial fees as implicitly ratified by long-standing draw practice; reduced disgorgement.", "estimated_probability": 0.2}
+      ],
+      "likely_judgment_summary": "Court orders dissolution, full accounting, and disgorgement of unauthorized management fees.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Force a formal accounting on the statute and contract",
+        "actions": [
+          "Cite the books-and-records clause in pleadings and demand pre-suit production.",
+          "Lead with Calhoun v. Magnolia Group on the right to formal accounting."
+        ],
+        "rationale": "The accounting is both the remedy and the evidentiary engine for disgorgement."
+      },
+      {
+        "priority": 2,
+        "title": "Frame management fees as undisclosed self-dealing",
+        "actions": [
+          "Cross-reference the compensation clause against bank transfers labeled 'management fees.'",
+          "Anchor breach analysis to Henderson v. Brookwood Partners."
+        ],
+        "rationale": "Clear contract text plus fiduciary precedent supports disgorgement and dissolution."
+      },
+      {
+        "priority": 3,
+        "title": "Establish capital-contribution equity",
+        "actions": [
+          "Quantify the 65/35 capital imbalance from inception.",
+          "Request equitable adjustment in winding-up distributions to reflect contributions."
+        ],
+        "rationale": "Equitable distribution favors a contributor-weighted result when self-dealing is proven."
+      },
+      {
+        "priority": 4,
+        "title": "Seek constructive trust over identified proceeds",
+        "actions": [
+          "Trace management-fee transfers into specific assets.",
+          "Request a constructive trust under Calhoun's reasoning."
+        ],
+        "rationale": "Constructive trust secures recovery if liquid assets are dissipated."
+      },
+      {
+        "priority": 5,
+        "title": "Calibrate dissolution mechanics",
+        "actions": [
+          "Propose a receiver or special master to oversee winding up.",
+          "Identify properties suitable for in-kind distribution to streamline closure."
+        ],
+        "rationale": "Practical winding-up plan increases court receptivity and reduces post-judgment friction."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {"tactic": "Early dispositive framing", "detail": "Move for an interim accounting order soon after filing."},
+      {"tactic": "Judicial economy narrative", "detail": "Anchor the case to the compensation clause and the labeled bank transfers."},
+      {"tactic": "Remedy calibration", "detail": "Pair dissolution with disgorgement and constructive trust to maximize recovery."},
+      {"tactic": "Settlement corridor", "detail": "Use the accounting record to drive a structured buy-out or wind-up agreement."}
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {"section": "Caption", "content": "Elaine Whitaker v. Robert Cole"},
+        {"section": "Jurisdiction & Venue", "content": "Arkansas \u2014 Garland County (Chancery Court)"},
+        {"section": "Parties", "content": "Plaintiff: Elaine Whitaker; Defendant: Robert Cole"},
+        {"section": "Claims for Relief", "content": "judicial dissolution; breach of fiduciary duty; accounting and constructive trust"},
+        {"section": "Statement of Facts", "content": "Numbered paragraphs tracing formation, capital contributions, the compensation clause, and the unauthorized management fees."},
+        {"section": "Prayer for Relief", "content": "Decree of dissolution; formal accounting from January 1, 2023; disgorgement of $310,000; equitable distribution after winding up"}
+      ],
+      "proposed_exhibits": [
+        {"id": "Exhibit A", "description": "Partnership agreement with compensation and books-and-records clauses"},
+        {"id": "Exhibit B", "description": "Capital contribution ledger evidencing 65/35 split"},
+        {"id": "Exhibit C", "description": "Bank statements showing labeled 'management fees' transfers"},
+        {"id": "Exhibit D", "description": "Key precedent: 210 Ark. 654 (1946) Henderson v. Brookwood Partners"},
+        {"id": "Exhibit E", "description": "Forensic accounting summary of unauthorized disbursements"}
+      ],
+      "pre_filing_checklist": [
+        "Confirm statute of limitations for breach of fiduciary duty and accounting under Arkansas law.",
+        "Issue litigation hold letter for partnership books and bank records.",
+        "Verify filing fee and e-filing account for Garland County Chancery Court.",
+        "Include certificate of service template.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Chancery Court.",
+          "Select complaint initiating equity action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 20.1,
+        "cap_id": "cap-sample-017",
+        "citation": "210 Ark. 654 (1946)",
+        "name": "Henderson v. Brookwood Partners",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1946-12-02",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["fiduciary duty", "partnership", "self-dealing"],
+        "headnotes": "A managing partner owes the highest duty of loyalty; undisclosed self-dealing requires disgorgement and supports judicial dissolution.",
+        "snippet": "Partner who diverted partnership opportunities to himself without disclosure was ordered to disgorge profits.",
+        "source_url": "https://case.law/"
+      },
+      {
+        "relevance_score": 12.6,
+        "cap_id": "cap-sample-018",
+        "citation": "248 Ark. 91 (1970)",
+        "name": "Calhoun v. Magnolia Group",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1970-05-25",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["accounting", "partnership", "constructive trust"],
+        "headnotes": "A partner is entitled to a formal accounting at any time on showing of necessity; refusal to provide records supports a constructive trust remedy.",
+        "snippet": "The court compelled an accounting and imposed a constructive trust on traceable proceeds.",
+        "source_url": "https://case.law/"
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 4 CAP precedents.",
+      "Precedent analyst reviewed 4 cases; sample plaintiff win rate: 0.75.",
+      "Outcome predictor: most-likely scenario probability ~0.7 (confidence: moderate).",
+      "Strategy agent produced 5 win strategies and 4 tactics.",
+      "Filing agent assembled draft filing package for chancery filing.",
+      "Critic review (rev 0): score 83.5/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {"agent": "research", "content": "Research agent retrieved 4 CAP precedents on partnership fiduciary duty and accounting."},
+      {"agent": "strategy", "content": "Strategy agent produced 5 win strategies anchored on Henderson and Calhoun."},
+      {"agent": "critic", "content": "Critic review (rev 0): score 83.5/100, PASS \u2192 ready for supervisor approval."}
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 83.5,
+  "revision_count": 0,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 83.5,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 82.0, "outcomes": 84.0, "strategy": 84.5},
+      "issues": [],
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-part-010b7c8d"
+}
+
