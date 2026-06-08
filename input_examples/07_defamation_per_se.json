@@ -1,0 +1,39 @@
+{
+  "use_case_id": 21,
+  "case_id": "DEMO-DEFAM-007",
+  "title": "Ortega Dental v. Voss — defamation per se by competing practice",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Benton County",
+  "parties": {
+    "plaintiff": "Ortega Dental PLLC",
+    "defendant": "Dr. Heather Voss"
+  },
+  "claims": [
+    "defamation per se",
+    "tortious interference with business expectancy",
+    "civil conspiracy"
+  ],
+  "legal_issues": [
+    "false statement of fact",
+    "publication to third parties",
+    "fault and damages",
+    "privilege and First Amendment defenses"
+  ],
+  "relief_sought": [
+    "General damages presumed under defamation per se",
+    "Special damages of $140,000 for lost patient revenue",
+    "Punitive damages",
+    "Injunction restraining further publication"
+  ],
+  "key_facts": [
+    "On October 4, 2025 defendant posted on a community forum that plaintiff 'falsifies insurance billing' and 'uses unsterilized instruments.'",
+    "Plaintiff's clinic passed an unannounced Arkansas State Board of Dental Examiners inspection on October 10, 2025 with zero deficiencies.",
+    "Patient cancellations during October-November 2025 exceeded the prior-year baseline by 42% with multiple patients citing the post.",
+    "Defendant operates a competing dental practice 1.3 miles from plaintiff's office."
+  ],
+  "contract_clauses": [],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}
+
