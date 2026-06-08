@@ -45,9 +45,15 @@ class CAPCaseRetriever:
         jurisdiction: str | None = None,
         legal_issues: list[str] | None = None,
         limit: int | None = None,
+        similarity_threshold: float | None = None,
     ) -> list[dict[str, Any]]:
         self.load()
         limit = limit or MAX_PRECEDENTS
+        threshold = (
+            similarity_threshold
+            if similarity_threshold is not None
+            else SIMILARITY_THRESHOLD
+        )
         terms = _tokenize(query)
         if legal_issues:
             for issue in legal_issues:
@@ -97,7 +103,7 @@ class CAPCaseRetriever:
                 freq = tf[term]
                 score += idf * (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * dl / avg_dl))
 
-            if score >= SIMILARITY_THRESHOLD:
+            if score >= threshold:
                 scored.append((score, row))
 
         scored.sort(key=lambda x: x[0], reverse=True)
@@ -106,7 +112,16 @@ class CAPCaseRetriever:
             case_path = self.data_dir / "cases" / row["file"]
             case_body: dict[str, Any] = {}
             if case_path.exists():
-                case_body = json.loads(case_path.read_text(encoding="utf-8"))
+                try:
+                    payload = json.loads(case_path.read_text(encoding="utf-8"))
+                except (OSError, json.JSONDecodeError):
+                    payload = None
+                if isinstance(payload, list):
+                    idx = row.get("case_index_in_file", 0)
+                    if 0 <= idx < len(payload) and isinstance(payload[idx], dict):
+                        case_body = payload[idx]
+                elif isinstance(payload, dict):
+                    case_body = payload
             results.append(
                 {
                     "relevance_score": round(score, 4),
