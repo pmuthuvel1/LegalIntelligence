@@ -1,0 +1,309 @@
+{
+  "use_case_id": 21,
+  "report": {
+    "generated_at": "2026-06-07T15:13:30.404000+00:00",
+    "case_id": "DEMO-DEFAM-007",
+    "title": "Ortega Dental v. Voss \u2014 defamation per se by competing practice",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 79.5,
+    "revision_count": 0,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 79.5,
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 79.5,
+        "approval_threshold": 70.0,
+        "dimension_scores": {"precedents": 78.0, "outcomes": 80.0, "strategy": 80.5},
+        "issues": [],
+        "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-DEFAM-007",
+      "title": "Ortega Dental v. Voss \u2014 defamation per se by competing practice",
+      "jurisdiction": "Arkansas",
+      "court_type": "Circuit Court",
+      "venue": "Benton County",
+      "parties": {"plaintiff": "Ortega Dental PLLC", "defendant": "Dr. Heather Voss"},
+      "claims": ["defamation per se", "tortious interference with business expectancy", "civil conspiracy"],
+      "legal_issues": [
+        "false statement of fact",
+        "publication to third parties",
+        "fault and damages",
+        "privilege and First Amendment defenses"
+      ],
+      "relief_sought": [
+        "General damages presumed under defamation per se",
+        "Special damages of $140,000 for lost patient revenue",
+        "Punitive damages",
+        "Injunction restraining further publication"
+      ],
+      "key_facts": [
+        "On October 4, 2025 defendant posted on a community forum that plaintiff 'falsifies insurance billing' and 'uses unsterilized instruments.'",
+        "Plaintiff's clinic passed an unannounced Arkansas State Board of Dental Examiners inspection on October 10, 2025 with zero deficiencies.",
+        "Patient cancellations during October-November 2025 exceeded the prior-year baseline by 42% with multiple patients citing the post.",
+        "Defendant operates a competing dental practice 1.3 miles from plaintiff's office."
+      ],
+      "contract_clauses": [],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-06-07T15:13:30.391000+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 4,
+      "plaintiff_win_rate_in_sample": 0.5,
+      "top_issues_in_corpus": [
+        ["defamation", 2],
+        ["damages", 2],
+        ["tortious interference", 1],
+        ["business reputation", 1],
+        ["first amendment", 1]
+      ],
+      "cases": [
+        {
+          "citation": "90 Ark. 405 (1936)",
+          "name": "Ridgeway v. State Press",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1936-10-19",
+          "relevance_score": 17.3,
+          "holding_summary": "Statements imputing professional dishonesty or unfitness are defamatory per se; damages are presumed without proof of special harm.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "92 Ark. 88 (1940)",
+          "name": "Atkins v. Northwest Gazette",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1940-03-04",
+          "relevance_score": 9.1,
+          "holding_summary": "Fair-comment privilege protects statements of opinion based on disclosed true facts but does not shield false statements of objective fact.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 2.0,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "71 Ark. 194 (1902)",
+          "name": "Smith v. Jones Mercantile Co.",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1902-03-15",
+          "relevance_score": 1.4,
+          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "90 Ark. 405 (1936)",
+          "name": "Ridgeway v. State Press",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1936-10-19",
+          "relevance_score": 17.3,
+          "holding_summary": "Statements imputing professional dishonesty or unfitness are defamatory per se; damages are presumed without proof of special harm.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": [
+        {
+          "citation": "92 Ark. 88 (1940)",
+          "name": "Atkins v. Northwest Gazette",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1940-03-04",
+          "relevance_score": 9.1,
+          "holding_summary": "Fair-comment privilege protects statements of opinion based on disclosed true facts but does not shield false statements of objective fact.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ]
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "low",
+      "precedent_sample_size": 4,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {"scenario": "most_likely", "description": "Liability finding for defamation per se with presumed and modest special damages; injunctive relief denied.", "estimated_probability": 0.58},
+        {"scenario": "best_case", "description": "Full award including special damages of $140,000, punitive damages, and a narrow injunction.", "estimated_probability": 0.28},
+        {"scenario": "worst_case", "description": "Statements deemed opinion under fair-comment privilege; defense verdict.", "estimated_probability": 0.25}
+      ],
+      "likely_judgment_summary": "Liability finding for defamation per se with presumed and modest special damages; injunctive relief denied.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Frame statements as factual, not opinion",
+        "actions": [
+          "Plead each statement verbatim and label its objectively verifiable nature.",
+          "Lead with Ridgeway v. State Press and distinguish Atkins on the opinion/fact line."
+        ],
+        "rationale": "Fact characterization defeats the fair-comment privilege and supports per se treatment."
+      },
+      {
+        "priority": 2,
+        "title": "Prove falsity with regulatory record",
+        "actions": [
+          "Attach the unannounced inspection report showing zero deficiencies.",
+          "Subpoena billing audits for the relevant period to rebut the 'falsifies insurance billing' claim."
+        ],
+        "rationale": "Documentary falsity is the strongest counter to substantial-truth defenses."
+      },
+      {
+        "priority": 3,
+        "title": "Build special-damages causation",
+        "actions": [
+          "Compile cancellation logs and patient declarations referencing the post.",
+          "Retain a healthcare-economics expert to model lost revenue against baseline."
+        ],
+        "rationale": "Even with presumed damages, special damages anchor the award and settlement leverage."
+      },
+      {
+        "priority": 4,
+        "title": "Establish competitive malice for punitives",
+        "actions": [
+          "Document the 1.3-mile proximity and overlapping patient market.",
+          "Develop evidence of defendant's awareness of falsity or reckless disregard."
+        ],
+        "rationale": "Competitive motive supports the actual-malice showing punitives require."
+      },
+      {
+        "priority": 5,
+        "title": "Calibrate injunctive ask",
+        "actions": [
+          "Request a narrow, content-neutral order limited to republication of identified falsehoods.",
+          "Avoid prior-restraint phrasing that triggers heightened scrutiny."
+        ],
+        "rationale": "Overbroad injunctions risk First Amendment denial and weaken settlement posture."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {"tactic": "Early dispositive framing", "detail": "Move for partial summary judgment on falsity once the inspection report and billing audits are authenticated."},
+      {"tactic": "Judicial economy narrative", "detail": "Anchor the case to two specific statements and three documentary records."},
+      {"tactic": "Remedy calibration", "detail": "Lead with presumed and special damages; reserve injunctive relief as a measured ask."},
+      {"tactic": "Settlement corridor", "detail": "Use a take-down-and-apology plus damages floor to drive early resolution."}
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {"section": "Caption", "content": "Ortega Dental PLLC v. Heather Voss"},
+        {"section": "Jurisdiction & Venue", "content": "Arkansas \u2014 Benton County"},
+        {"section": "Parties", "content": "Plaintiff: Ortega Dental PLLC; Defendant: Dr. Heather Voss"},
+        {"section": "Claims for Relief", "content": "defamation per se; tortious interference; civil conspiracy"},
+        {"section": "Statement of Facts", "content": "Numbered paragraphs quoting each statement, identifying the audience, and tracing impact on patient retention."},
+        {"section": "Prayer for Relief", "content": "Presumed and special damages of $140,000; punitive damages; narrow injunction"}
+      ],
+      "proposed_exhibits": [
+        {"id": "Exhibit A", "description": "Screenshots of the October 4, 2025 forum post with metadata"},
+        {"id": "Exhibit B", "description": "State Board of Dental Examiners inspection report (Oct. 10, 2025)"},
+        {"id": "Exhibit C", "description": "Patient cancellation log and supporting declarations"},
+        {"id": "Exhibit D", "description": "Key precedent: 90 Ark. 405 (1936) Ridgeway v. State Press"},
+        {"id": "Exhibit E", "description": "Healthcare-economics expert preliminary report"}
+      ],
+      "pre_filing_checklist": [
+        "Confirm one-year defamation statute of limitations in Arkansas and any republication issues.",
+        "Verify filing fee and e-filing account for Benton County Circuit Court.",
+        "Include certificate of service template.",
+        "Anti-SLAPP/First Amendment readiness assessment.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Circuit Court.",
+          "Select complaint initiating civil action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 17.3,
+        "cap_id": "cap-sample-011",
+        "citation": "90 Ark. 405 (1936)",
+        "name": "Ridgeway v. State Press",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1936-10-19",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["defamation", "business reputation", "presumed damages"],
+        "headnotes": "Statements imputing professional dishonesty or unfitness are defamatory per se; damages are presumed without proof of special harm.",
+        "snippet": "An accusation of dishonest business practice strikes at the heart of professional standing and is actionable per se.",
+        "source_url": "https://case.law/"
+      },
+      {
+        "relevance_score": 9.1,
+        "cap_id": "cap-sample-012",
+        "citation": "92 Ark. 88 (1940)",
+        "name": "Atkins v. Northwest Gazette",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1940-03-04",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": false,
+        "legal_issues": ["defamation", "fair comment", "first amendment"],
+        "headnotes": "Fair-comment privilege protects statements of opinion based on disclosed true facts but does not shield false statements of objective fact.",
+        "snippet": "Where the speaker discloses the underlying facts and labels the assessment as opinion, the privilege applies.",
+        "source_url": "https://case.law/"
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 4 CAP precedents.",
+      "Precedent analyst reviewed 4 cases; sample plaintiff win rate: 0.5.",
+      "Outcome predictor: most-likely scenario probability ~0.58 (confidence: low).",
+      "Strategy agent produced 5 win strategies and 4 tactics.",
+      "Filing agent assembled draft filing package for counsel review.",
+      "Critic review (rev 0): score 79.5/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {"agent": "research", "content": "Research agent retrieved 4 CAP precedents addressing defamation per se."},
+      {"agent": "strategy", "content": "Strategy agent produced 5 win strategies including narrow injunctive ask."},
+      {"agent": "critic", "content": "Critic review (rev 0): score 79.5/100, PASS \u2192 ready for supervisor approval."}
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 79.5,
+  "revision_count": 0,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 79.5,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 78.0, "outcomes": 80.0, "strategy": 80.5},
+      "issues": [],
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-defam-007e4f5a"
+}
+
