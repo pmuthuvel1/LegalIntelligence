@@ -1,0 +1,365 @@
+{
+  "use_case_id": 21,
+  "report": {
+    "generated_at": "2026-06-07T15:10:11.001000+00:00",
+    "case_id": "DEMO-NEG-004",
+    "title": "Patel v. Riverbend Grocers \u2014 premises liability slip-and-fall",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 81.0,
+    "revision_count": 0,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 81.0,
+      "recommendations": [
+        "Analysis meets quality thresholds; ready for supervisor approval."
+      ],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 81.0,
+        "approval_threshold": 70.0,
+        "dimension_scores": {
+          "precedents": 80.0,
+          "outcomes": 80.0,
+          "strategy": 83.0
+        },
+        "issues": [],
+        "recommendations": [
+          "Analysis meets quality thresholds; ready for supervisor approval."
+        ],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-NEG-004",
+      "title": "Patel v. Riverbend Grocers \u2014 premises liability slip-and-fall",
+      "jurisdiction": "Arkansas",
+      "court_type": "Circuit Court",
+      "venue": "Pulaski County",
+      "parties": {
+        "plaintiff": "Anika Patel",
+        "defendant": "Riverbend Grocers Inc."
+      },
+      "claims": [
+        "negligence",
+        "premises liability",
+        "negligent maintenance"
+      ],
+      "legal_issues": [
+        "duty of care to invitees",
+        "constructive notice of hazard",
+        "comparative fault"
+      ],
+      "relief_sought": [
+        "Compensatory damages of $85,000 for medical expenses and lost wages",
+        "Damages for pain and suffering",
+        "Costs of suit"
+      ],
+      "key_facts": [
+        "On July 12, 2025 plaintiff slipped on a leaking refrigerator puddle in aisle 4 of defendant's store.",
+        "Store incident log shows a prior leak report from the same unit two days earlier with no repair ticket.",
+        "Surveillance video captured the puddle existing for at least 47 minutes before the fall."
+      ],
+      "contract_clauses": [],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-06-07T15:10:10.991000+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 5,
+      "plaintiff_win_rate_in_sample": 0.6,
+      "top_issues_in_corpus": [
+        ["negligence", 2],
+        ["damages", 2],
+        ["contributory negligence", 1],
+        ["premises liability", 1],
+        ["duty of care", 1]
+      ],
+      "cases": [
+        {
+          "citation": "72 Ark. 310 (1905)",
+          "name": "Williams v. Central Railroad",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1905-11-02",
+          "relevance_score": 18.91,
+          "holding_summary": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "84 Ark. 17 (1928)",
+          "name": "Holcomb v. Union Market",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1928-02-09",
+          "relevance_score": 14.22,
+          "holding_summary": "A merchant owes invitees a duty to keep aisles reasonably safe; constructive notice arises where a hazard existed long enough that ordinary inspection would have discovered it.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "76 Ark. 132 (1912)",
+          "name": "Bryant v. Ozark Theaters",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1912-04-22",
+          "relevance_score": 9.08,
+          "holding_summary": "Business invitees are entitled to ordinary care; failure to remedy a known recurring hazard supports a negligence finding.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 2.41,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "78 Ark. 401 (1915)",
+          "name": "Davis v. Ozark Manufacturing",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1915-01-10",
+          "relevance_score": 1.97,
+          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "84 Ark. 17 (1928)",
+          "name": "Holcomb v. Union Market",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1928-02-09",
+          "relevance_score": 14.22,
+          "holding_summary": "A merchant owes invitees a duty to keep aisles reasonably safe; constructive notice arises where a hazard existed long enough that ordinary inspection would have discovered it.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "76 Ark. 132 (1912)",
+          "name": "Bryant v. Ozark Theaters",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1912-04-22",
+          "relevance_score": 9.08,
+          "holding_summary": "Business invitees are entitled to ordinary care; failure to remedy a known recurring hazard supports a negligence finding.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": [
+        {
+          "citation": "72 Ark. 310 (1905)",
+          "name": "Williams v. Central Railroad",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1905-11-02",
+          "relevance_score": 18.91,
+          "holding_summary": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ]
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "low",
+      "precedent_sample_size": 5,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {
+          "scenario": "most_likely",
+          "description": "Liability finding for plaintiff with a comparative-fault reduction of 10-25%.",
+          "estimated_probability": 0.6
+        },
+        {
+          "scenario": "best_case",
+          "description": "Full compensatory award of $85,000 plus pain-and-suffering damages without fault reduction.",
+          "estimated_probability": 0.35
+        },
+        {
+          "scenario": "worst_case",
+          "description": "Defense verdict on lack of actual or constructive notice, or comparative fault \u2265 50%.",
+          "estimated_probability": 0.2
+        }
+      ],
+      "likely_judgment_summary": "Liability finding for plaintiff with a comparative-fault reduction of 10-25%.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Lock in constructive notice with video and incident log",
+        "actions": [
+          "Authenticate the 47-minute video timeline through the store's loss-prevention custodian.",
+          "Subpoena maintenance tickets and refrigeration vendor records tied to the unit in aisle 4."
+        ],
+        "rationale": "Constructive notice is the central liability question; the strongest evidence is contemporaneous and documentary."
+      },
+      {
+        "priority": 2,
+        "title": "Neutralize comparative-fault defense",
+        "actions": [
+          "Develop expert testimony that the puddle was not open and obvious under typical store lighting.",
+          "Preserve plaintiff's footwear and emphasize ordinary shopping conduct at the time of fall."
+        ],
+        "rationale": "Arkansas modified comparative fault can extinguish recovery if plaintiff's share reaches 50%."
+      },
+      {
+        "priority": 3,
+        "title": "Quantify damages with medical and wage proof",
+        "actions": [
+          "Compile certified medical bills and treating-physician narrative through MMI.",
+          "Document missed shifts with payroll records and supervisor declarations."
+        ],
+        "rationale": "Damages credibility frames settlement leverage and jury anchoring."
+      },
+      {
+        "priority": 4,
+        "title": "Preempt spoliation defense",
+        "actions": [
+          "Send litigation hold letter immediately for video, logs, and maintenance records.",
+          "Move to compel preservation if defendant signals overwriting practices."
+        ],
+        "rationale": "Loss of the 47-minute clip would gut the constructive-notice theory."
+      },
+      {
+        "priority": 5,
+        "title": "Frame settlement corridor",
+        "actions": [
+          "Anchor demand to medical specials plus a multiplier reflecting Holcomb-line liability strength.",
+          "Define walk-away point before depositions to control cost exposure."
+        ],
+        "rationale": "Slip-and-fall matters frequently resolve once liability proofs are crystallized."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {
+        "tactic": "Early dispositive framing",
+        "detail": "Move for partial summary judgment on duty and breach once video and logs are authenticated."
+      },
+      {
+        "tactic": "Judicial economy narrative",
+        "detail": "Frame the case as a narrow, record-based dispute about a single refrigeration unit and a documented prior report."
+      },
+      {
+        "tactic": "Remedy calibration",
+        "detail": "Tier damages between economic specials and non-economic harm to support a favorable partial judgment."
+      },
+      {
+        "tactic": "Settlement corridor",
+        "detail": "Use scenario probabilities to drive a pre-mediation demand that reflects comparative-fault risk."
+      }
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {"section": "Caption", "content": "Anika Patel v. Riverbend Grocers Inc."},
+        {"section": "Jurisdiction & Venue", "content": "Arkansas \u2014 Pulaski County"},
+        {"section": "Parties", "content": "Plaintiff: Anika Patel; Defendant: Riverbend Grocers Inc."},
+        {"section": "Claims for Relief", "content": "negligence; premises liability; negligent maintenance"},
+        {"section": "Statement of Facts", "content": "Numbered paragraphs tying the prior leak report, the 47-minute video, and the fall to each element of duty, breach, causation, and damages."},
+        {"section": "Prayer for Relief", "content": "Compensatory damages of $85,000; pain and suffering damages; costs of suit"}
+      ],
+      "proposed_exhibits": [
+        {"id": "Exhibit A", "description": "Chronology of the July 12, 2025 incident"},
+        {"id": "Exhibit B", "description": "Surveillance video stills and chain-of-custody affidavit"},
+        {"id": "Exhibit C", "description": "Prior leak incident log entry"},
+        {"id": "Exhibit D", "description": "Key precedent: 84 Ark. 17 (1928) Holcomb v. Union Market"},
+        {"id": "Exhibit E", "description": "Medical bills and treating-physician narrative"}
+      ],
+      "pre_filing_checklist": [
+        "Confirm three-year statute of limitations for negligence in Arkansas.",
+        "Verify filing fee and e-filing account for Pulaski County Circuit Court.",
+        "Include certificate of service template.",
+        "Attach civil cover sheet if required by local rules.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Circuit Court.",
+          "Select complaint initiating civil action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 18.91,
+        "cap_id": "cap-sample-002",
+        "citation": "72 Ark. 310 (1905)",
+        "name": "Williams v. Central Railroad",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1905-11-02",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": false,
+        "legal_issues": ["negligence", "contributory negligence", "damages"],
+        "headnotes": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
+        "snippet": "The railroad owed a duty of reasonable care at crossings, but the plaintiff's failure to stop, look, and listen when approaching a known dangerous crossing defeats the claim.",
+        "source_url": "https://case.law/"
+      },
+      {
+        "relevance_score": 14.22,
+        "cap_id": "cap-sample-008",
+        "citation": "84 Ark. 17 (1928)",
+        "name": "Holcomb v. Union Market",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1928-02-09",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["premises liability", "negligence", "duty of care"],
+        "headnotes": "A merchant owes invitees a duty to keep aisles reasonably safe; constructive notice arises where a hazard existed long enough that ordinary inspection would have discovered it.",
+        "snippet": "Liquid had pooled on the market floor for nearly an hour with no inspection sweep; reasonable diligence would have discovered and removed the hazard.",
+        "source_url": "https://case.law/"
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 5 CAP precedents.",
+      "Precedent analyst reviewed 5 cases; sample plaintiff win rate: 0.6.",
+      "Outcome predictor: most-likely scenario probability ~0.6 (confidence: low).",
+      "Strategy agent produced 5 win strategies and 4 tactics.",
+      "Filing agent assembled draft filing package for counsel review.",
+      "Critic review (rev 0): score 81.0/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {"agent": "research", "content": "Research agent retrieved 5 CAP precedents."},
+      {"agent": "strategy", "content": "Strategy agent produced 5 win strategies and 4 tactics."},
+      {"agent": "critic", "content": "Critic review (rev 0): score 81.0/100, PASS \u2192 suggested target: strategy. Analysis meets quality thresholds; ready for supervisor approval."}
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 81.0,
+  "revision_count": 0,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 81.0,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 80.0, "outcomes": 80.0, "strategy": 83.0},
+      "issues": [],
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-neg-004a1b2c"
+}
+
