@@ -15,6 +15,7 @@ from app.agents import (
     strategy_agent,
     supervisor_agent,
 )
+from app.logging_utils import traced_agent
 from app.state import LegalCaseState
 
 
@@ -28,14 +29,22 @@ def build_legal_intelligence_graph(*, with_checkpointer: bool = True):
     """Compile the multi-agent legal workflow graph with critique revision loops."""
     graph = StateGraph(LegalCaseState)
 
-    graph.add_node("intake", intake_agent)
-    graph.add_node("research", research_agent)
-    graph.add_node("precedent_analyst", precedent_analyst_agent)
-    graph.add_node("outcome_predictor", outcome_predictor_agent)
-    graph.add_node("strategy", strategy_agent)
-    graph.add_node("filing", filing_agent)
-    graph.add_node("critic", critic_agent)
-    graph.add_node("supervisor", supervisor_agent)
+    # Each node is wrapped so every invocation emits structured
+    # receive_task / complete_task spans with the shared trace_id.
+    graph.add_node("intake", traced_agent("intake")(intake_agent))
+    graph.add_node("research", traced_agent("research")(research_agent))
+    graph.add_node(
+        "precedent_analyst",
+        traced_agent("precedent_analyst")(precedent_analyst_agent),
+    )
+    graph.add_node(
+        "outcome_predictor",
+        traced_agent("outcome_predictor")(outcome_predictor_agent),
+    )
+    graph.add_node("strategy", traced_agent("strategy")(strategy_agent))
+    graph.add_node("filing", traced_agent("filing")(filing_agent))
+    graph.add_node("critic", traced_agent("critic")(critic_agent))
+    graph.add_node("supervisor", traced_agent("supervisor")(supervisor_agent))
 
     graph.add_edge(START, "intake")
     graph.add_edge("intake", "research")
