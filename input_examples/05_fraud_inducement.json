@@ -1,0 +1,48 @@
+{
+  "use_case_id": 21,
+  "case_id": "DEMO-FRAUD-005",
+  "title": "Hammond v. Pioneer Investments — fraud in the inducement of stock purchase",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Sebastian County",
+  "parties": {
+    "plaintiff": "Marcus Hammond",
+    "defendant": "Pioneer Investments LLC"
+  },
+  "claims": [
+    "fraud in the inducement",
+    "negligent misrepresentation",
+    "rescission"
+  ],
+  "legal_issues": [
+    "material misrepresentation",
+    "scienter",
+    "reasonable reliance",
+    "damages"
+  ],
+  "relief_sought": [
+    "Rescission of the September 2025 stock purchase agreement",
+    "Restitution of the $250,000 purchase price",
+    "Consequential damages and punitive damages",
+    "Costs and attorney fees as allowed by statute"
+  ],
+  "key_facts": [
+    "Defendant's principals provided a private placement memorandum overstating Q2 2025 revenue by 38%.",
+    "Plaintiff received those statements two days before signing the September 15, 2025 stock purchase agreement.",
+    "Internal emails produced in pre-suit demand show defendant's CFO knew the figures were unsupported.",
+    "Plaintiff would not have invested at the disclosed valuation but for the misstatements."
+  ],
+  "contract_clauses": [
+    {
+      "name": "Representations and warranties",
+      "text": "Seller represents that all financial statements furnished to Buyer fairly present the financial condition of the company in all material respects."
+    },
+    {
+      "name": "Integration",
+      "text": "This agreement constitutes the entire understanding of the parties and supersedes all prior oral and written communications."
+    }
+  ],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}
+
