@@ -1,0 +1,43 @@
+{
+  "use_case_id": 21,
+  "case_id": "DEMO-PE-009",
+  "title": "Nguyen v. Summit Logistics — promissory estoppel after relocation reliance",
+  "jurisdiction": "Arkansas",
+  "court_type": "Circuit Court",
+  "venue": "Washington County",
+  "parties": {
+    "plaintiff": "Linh Nguyen",
+    "defendant": "Summit Logistics Corp."
+  },
+  "claims": [
+    "promissory estoppel",
+    "negligent misrepresentation",
+    "alternative breach of implied contract"
+  ],
+  "legal_issues": [
+    "definite and clear promise",
+    "reasonable and foreseeable reliance",
+    "injustice avoidable only by enforcement",
+    "reliance damages versus expectation damages"
+  ],
+  "relief_sought": [
+    "Reliance damages of $48,200 covering relocation, lease termination, and lost prior compensation",
+    "Six months of promised base salary as reasonable reliance equivalent",
+    "Costs of suit"
+  ],
+  "key_facts": [
+    "On August 11, 2025 defendant's VP of Operations sent plaintiff a signed written offer for a Senior Analyst role starting September 15, 2025.",
+    "In reliance, plaintiff resigned her Texas position, broke her Dallas apartment lease, and relocated her family to Fayetteville.",
+    "On September 12, 2025 defendant rescinded the offer citing an internal hiring freeze with no severance or relocation reimbursement.",
+    "No formal employment contract was countersigned, but the offer letter set salary, start date, and duties with specificity."
+  ],
+  "contract_clauses": [
+    {
+      "name": "Offer terms",
+      "text": "We are pleased to offer you the position of Senior Analyst at an annual base salary of $115,000, beginning September 15, 2025. This offer is contingent on standard background screening."
+    }
+  ],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}
+
