@@ -1,0 +1,310 @@
+{
+  "use_case_id": 21,
+  "report": {
+    "generated_at": "2026-06-07T15:15:58.812000+00:00",
+    "case_id": "DEMO-PE-009",
+    "title": "Nguyen v. Summit Logistics \u2014 promissory estoppel after relocation reliance",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 80.0,
+    "revision_count": 0,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 80.0,
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 80.0,
+        "approval_threshold": 70.0,
+        "dimension_scores": {"precedents": 79.0, "outcomes": 80.0, "strategy": 81.0},
+        "issues": [],
+        "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-PE-009",
+      "title": "Nguyen v. Summit Logistics \u2014 promissory estoppel after relocation reliance",
+      "jurisdiction": "Arkansas",
+      "court_type": "Circuit Court",
+      "venue": "Washington County",
+      "parties": {"plaintiff": "Linh Nguyen", "defendant": "Summit Logistics Corp."},
+      "claims": ["promissory estoppel", "negligent misrepresentation", "alternative breach of implied contract"],
+      "legal_issues": [
+        "definite and clear promise",
+        "reasonable and foreseeable reliance",
+        "injustice avoidable only by enforcement",
+        "reliance damages versus expectation damages"
+      ],
+      "relief_sought": [
+        "Reliance damages of $48,200 covering relocation, lease termination, and lost prior compensation",
+        "Six months of promised base salary as reasonable reliance equivalent",
+        "Costs of suit"
+      ],
+      "key_facts": [
+        "On August 11, 2025 defendant's VP of Operations sent plaintiff a signed written offer for a Senior Analyst role starting September 15, 2025.",
+        "In reliance, plaintiff resigned her Texas position, broke her Dallas apartment lease, and relocated her family to Fayetteville.",
+        "On September 12, 2025 defendant rescinded the offer citing an internal hiring freeze with no severance or relocation reimbursement.",
+        "No formal employment contract was countersigned, but the offer letter set salary, start date, and duties with specificity."
+      ],
+      "contract_clauses": [
+        {"name": "Offer terms", "text": "We are pleased to offer you the position of Senior Analyst at an annual base salary of $115,000, beginning September 15, 2025. This offer is contingent on standard background screening."}
+      ],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-06-07T15:15:58.801000+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 4,
+      "plaintiff_win_rate_in_sample": 0.5,
+      "top_issues_in_corpus": [
+        ["promissory estoppel", 2],
+        ["reliance damages", 1],
+        ["employment", 1],
+        ["misrepresentation", 1],
+        ["damages", 1]
+      ],
+      "cases": [
+        {
+          "citation": "260 Ark. 510 (1976)",
+          "name": "Bryant v. River Valley Mills",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1976-09-13",
+          "relevance_score": 18.4,
+          "holding_summary": "Promissory estoppel may enforce an employer's clear promise where the employee reasonably relies to detriment and injustice can be avoided only by enforcement.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "289 Ark. 217 (1986)",
+          "name": "Holloway v. Arkansas Telecom",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1986-04-28",
+          "relevance_score": 9.2,
+          "holding_summary": "Reliance damages are recoverable where promissory estoppel applies; expectation damages may follow only when the promise is definite and supported by a writing.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "78 Ark. 401 (1915)",
+          "name": "Davis v. Ozark Manufacturing",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1915-01-10",
+          "relevance_score": 3.9,
+          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 1.1,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "260 Ark. 510 (1976)",
+          "name": "Bryant v. River Valley Mills",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1976-09-13",
+          "relevance_score": 18.4,
+          "holding_summary": "Promissory estoppel may enforce an employer's clear promise where the employee reasonably relies to detriment and injustice can be avoided only by enforcement.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": [
+        {
+          "citation": "289 Ark. 217 (1986)",
+          "name": "Holloway v. Arkansas Telecom",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1986-04-28",
+          "relevance_score": 9.2,
+          "holding_summary": "Reliance damages are recoverable where promissory estoppel applies; expectation damages may follow only when the promise is definite and supported by a writing.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ]
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "low",
+      "precedent_sample_size": 4,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {"scenario": "most_likely", "description": "Liability finding with reliance damages of $48,200 awarded.", "estimated_probability": 0.62},
+        {"scenario": "best_case", "description": "Reliance plus partial expectation award (3-6 months wages).", "estimated_probability": 0.32},
+        {"scenario": "worst_case", "description": "Defense verdict on at-will doctrine and lack of definite promise.", "estimated_probability": 0.22}
+      ],
+      "likely_judgment_summary": "Liability finding with reliance damages of $48,200 awarded.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Anchor the clear-promise element to the signed offer letter",
+        "actions": [
+          "Plead the August 11, 2025 offer verbatim with role, salary, and start date.",
+          "Lead with Bryant v. River Valley Mills as Arkansas authority."
+        ],
+        "rationale": "Definiteness is the gateway element; the written offer satisfies it."
+      },
+      {
+        "priority": 2,
+        "title": "Build the reliance and detriment narrative",
+        "actions": [
+          "Attach the resignation acceptance, lease-termination receipt, and relocation invoices.",
+          "Sequence each act in time relative to the offer and rescission."
+        ],
+        "rationale": "Reliance must be reasonable and detrimental; documentary sequencing crystallizes the chain."
+      },
+      {
+        "priority": 3,
+        "title": "Frame damages as reliance-equivalent",
+        "actions": [
+          "Quantify out-of-pocket costs ($48,200) plus the value of the forfeited Texas role.",
+          "Argue six months' salary as a reasonable reliance proxy under Holloway."
+        ],
+        "rationale": "Reliance damages are the most defensible measure; expectation damages remain a stretch."
+      },
+      {
+        "priority": 4,
+        "title": "Plead negligent misrepresentation in the alternative",
+        "actions": [
+          "Allege the VP's representations were made without reasonable basis given the impending hiring freeze.",
+          "Preserve discovery into internal communications around the freeze decision."
+        ],
+        "rationale": "Alternative theory preserves recovery if the court treats the offer as an at-will promise only."
+      },
+      {
+        "priority": 5,
+        "title": "Position for early settlement",
+        "actions": [
+          "Send a demand letter quantifying reliance damages with supporting receipts.",
+          "Offer mediation before discovery to capture defendant's defense-cost calculus."
+        ],
+        "rationale": "Reliance-damage cases frequently resolve once documented out-of-pocket loss is undisputed."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {"tactic": "Early dispositive framing", "detail": "Move for partial summary judgment on the existence of a clear promise once the offer letter is authenticated."},
+      {"tactic": "Judicial economy narrative", "detail": "Anchor the case to one offer letter, one rescission, and a short receipt list."},
+      {"tactic": "Remedy calibration", "detail": "Lead with reliance damages; reserve partial expectation as alternative."},
+      {"tactic": "Settlement corridor", "detail": "Use receipts-based demand to drive resolution above out-of-pocket but below full expectation."}
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {"section": "Caption", "content": "Linh Nguyen v. Summit Logistics Corp."},
+        {"section": "Jurisdiction & Venue", "content": "Arkansas \u2014 Washington County"},
+        {"section": "Parties", "content": "Plaintiff: Linh Nguyen; Defendant: Summit Logistics Corp."},
+        {"section": "Claims for Relief", "content": "promissory estoppel; negligent misrepresentation; alternative breach of implied contract"},
+        {"section": "Statement of Facts", "content": "Numbered paragraphs tracing the offer, plaintiff's reliance acts, and the September 12 rescission."},
+        {"section": "Prayer for Relief", "content": "Reliance damages of $48,200; six months of promised base salary; costs of suit"}
+      ],
+      "proposed_exhibits": [
+        {"id": "Exhibit A", "description": "Signed offer letter dated August 11, 2025"},
+        {"id": "Exhibit B", "description": "Plaintiff's resignation letter to prior employer"},
+        {"id": "Exhibit C", "description": "Dallas lease termination receipt and relocation invoices"},
+        {"id": "Exhibit D", "description": "Rescission email dated September 12, 2025"},
+        {"id": "Exhibit E", "description": "Key precedent: 260 Ark. 510 (1976) Bryant v. River Valley Mills"}
+      ],
+      "pre_filing_checklist": [
+        "Confirm three-year statute of limitations for promissory estoppel claims.",
+        "Verify filing fee and e-filing account for Washington County Circuit Court.",
+        "Include certificate of service template.",
+        "Attach civil cover sheet if required by local rules.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Circuit Court.",
+          "Select complaint initiating civil action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 18.4,
+        "cap_id": "cap-sample-015",
+        "citation": "260 Ark. 510 (1976)",
+        "name": "Bryant v. River Valley Mills",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1976-09-13",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["promissory estoppel", "employment"],
+        "headnotes": "Promissory estoppel may enforce an employer's clear promise where the employee reasonably relies to detriment and injustice can be avoided only by enforcement.",
+        "snippet": "Plaintiff sold her prior business in reliance on the offered position; the court enforced the promise to the extent of reliance damages.",
+        "source_url": "https://case.law/"
+      },
+      {
+        "relevance_score": 9.2,
+        "cap_id": "cap-sample-016",
+        "citation": "289 Ark. 217 (1986)",
+        "name": "Holloway v. Arkansas Telecom",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1986-04-28",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": false,
+        "legal_issues": ["promissory estoppel", "reliance damages"],
+        "headnotes": "Reliance damages are recoverable where promissory estoppel applies; expectation damages may follow only when the promise is definite and supported by a writing.",
+        "snippet": "Recovery limited to documented reliance; expectation damages denied for indefinite promise.",
+        "source_url": "https://case.law/"
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 4 CAP precedents.",
+      "Precedent analyst reviewed 4 cases; sample plaintiff win rate: 0.5.",
+      "Outcome predictor: most-likely scenario probability ~0.62 (confidence: low).",
+      "Strategy agent produced 5 win strategies and 4 tactics.",
+      "Filing agent assembled draft filing package for counsel review.",
+      "Critic review (rev 0): score 80.0/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {"agent": "research", "content": "Research agent retrieved 4 CAP precedents on promissory estoppel and reliance."},
+      {"agent": "strategy", "content": "Strategy agent produced 5 win strategies anchored on the August 11 offer letter."},
+      {"agent": "critic", "content": "Critic review (rev 0): score 80.0/100, PASS \u2192 ready for supervisor approval."}
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 80.0,
+  "revision_count": 0,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 80.0,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 79.0, "outcomes": 80.0, "strategy": 81.0},
+      "issues": [],
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-pe-009a6b7c"
+}
+
