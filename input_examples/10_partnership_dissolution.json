@@ -1,0 +1,48 @@
+{
+  "use_case_id": 21,
+  "case_id": "DEMO-PART-010",
+  "title": "Whitaker v. Cole — partnership dissolution and accounting",
+  "jurisdiction": "Arkansas",
+  "court_type": "Chancery Court",
+  "venue": "Garland County",
+  "parties": {
+    "plaintiff": "Elaine Whitaker",
+    "defendant": "Robert Cole"
+  },
+  "claims": [
+    "judicial dissolution of partnership",
+    "breach of fiduciary duty",
+    "accounting and constructive trust"
+  ],
+  "legal_issues": [
+    "partner's duty of loyalty and good faith",
+    "self-dealing and undisclosed compensation",
+    "valuation of partnership assets on winding up",
+    "right to formal accounting under partnership statute"
+  ],
+  "relief_sought": [
+    "Decree dissolving Whitaker & Cole Real Estate Partners effective date of judgment",
+    "Formal accounting of all partnership receipts and disbursements from January 1, 2023",
+    "Disgorgement of approximately $310,000 in undisclosed management fees taken by defendant",
+    "Equitable distribution of remaining partnership assets after winding up"
+  ],
+  "key_facts": [
+    "Parties formed a 50/50 general partnership in 2018 to acquire and lease commercial properties.",
+    "Defendant managed day-to-day operations and bank accounts; plaintiff supplied 65% of initial capital.",
+    "Plaintiff discovered in October 2025 that defendant paid himself unbudgeted 'management fees' totaling $310,000 over three years without partner consent.",
+    "Partnership agreement requires unanimous consent for partner compensation above an agreed draw schedule."
+  ],
+  "contract_clauses": [
+    {
+      "name": "Partner compensation",
+      "text": "Neither Partner shall receive salary, fee, or other compensation from the Partnership except as expressly approved in writing by both Partners."
+    },
+    {
+      "name": "Books and records",
+      "text": "Each Partner shall have full access at all times to the Partnership's books, records, and bank accounts."
+    }
+  ],
+  "your_role": "plaintiff",
+  "procedural_posture": "pre-filing"
+}
+
