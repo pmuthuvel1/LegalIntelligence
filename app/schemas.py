@@ -40,6 +40,11 @@ class AnalyzeRequest(BaseModel):
         description="Optional thread ID for checkpointed multi-turn sessions.",
         max_length=128,
     )
+    run_id: str | None = Field(
+        default=None,
+        description="Caller-supplied run identifier (echoed back). Auto-generated if absent.",
+        max_length=128,
+    )
     skip_log: bool = False
 
 
@@ -59,11 +64,46 @@ class ReadyResponse(BaseModel):
     warnings: list[str] = Field(default_factory=list)
 
 
-class AnalyzeResponse(BaseModel):
-    report: dict[str, Any]
-    legal_caveats: list[str]
-    errors: list[str]
-    quality_score: float | None = None
-    revision_count: int = 0
-    critique_history: list[dict[str, Any]] = Field(default_factory=list)
-    thread_id: str | None = None
+# ---------------------------------------------------------------------------
+# Canonical run envelope (success / error)
+# ---------------------------------------------------------------------------
+
+
+class AgentInfo(BaseModel):
+    name: str
+    role: str
+
+
+class OutputBlock(BaseModel):
+    summary: str
+    recommendations: list[str] = Field(default_factory=list)
+    artifacts: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class ErrorBlock(BaseModel):
+    type: str
+    message: str
+    recoverable: bool = False
+
+
+class RunSuccessResponse(BaseModel):
+    run_id: str
+    status: str = Field(default="success", pattern="^success$")
+    output: OutputBlock
+    agents: list[AgentInfo] = Field(default_factory=list)
+    trace_id: str | None = None
+    log_file: str | None = None
+    execution_time_seconds: float
+
+
+class RunErrorResponse(BaseModel):
+    run_id: str
+    status: str = Field(default="error", pattern="^error$")
+    error: ErrorBlock
+    trace_id: str | None = None
+    log_file: str | None = None
+    execution_time_seconds: float
+
+
+# Convenience union for OpenAPI docs.
+RunResponse = RunSuccessResponse | RunErrorResponse
