@@ -19,12 +19,16 @@ APP_ENV = os.getenv("APP_ENV", "development")
 APP_VERSION = os.getenv("APP_VERSION", "2.0.0")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 
-# Compass API configuration (required)
+# Compass API configuration.
+# All values come from environment variables; see .env.example for canonical
+# defaults. The :mod:`app.compass` module is the runtime single source of truth
+# (it raises ConfigurationError when a required value is missing).
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "").strip()
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1")
-OPENAI_REASONING_MODEL = os.getenv("OPENAI_REASONING_MODEL", "gpt-5.1")
-OPENAI_EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
+COMPASS_CHAT_MODEL = os.getenv("COMPASS_CHAT_MODEL", "")
+COMPASS_REASONING_MODEL = os.getenv("COMPASS_REASONING_MODEL", "")
+COMPASS_EMBEDDING_MODEL = os.getenv("COMPASS_EMBEDDING_MODEL", "")
+COMPASS_WHISPER_MODEL = os.getenv("COMPASS_WHISPER_MODEL", "")
 SAMPLE_MODE = os.getenv("SAMPLE_MODE", "false").lower() == "true"
 
 # Optional: supplemental search via CourtListener (CAP data is hosted there)
@@ -37,6 +41,25 @@ MAX_PRECEDENTS = int(os.getenv("MAX_PRECEDENTS", "8"))
 SIMILARITY_THRESHOLD = float(os.getenv("SIMILARITY_THRESHOLD", "0.12"))
 MAX_REVISIONS = int(os.getenv("MAX_REVISIONS", "2"))
 CRITIQUE_APPROVAL_THRESHOLD = float(os.getenv("CRITIQUE_APPROVAL_THRESHOLD", "70"))
+ESCALATION_QUALITY_THRESHOLD = float(os.getenv("ESCALATION_QUALITY_THRESHOLD", "40"))
+
+# Retriever retry / broadening behaviour.
+# When the first BM25 pass returns fewer than ``LOW_PRECEDENT_FLOOR`` hits the
+# research agent will retry with broader parameters (jurisdiction dropped,
+# threshold relaxed) up to ``RETRIEVER_MAX_RETRIES`` times, emitting an explicit
+# ``retry`` trace span for each attempt.
+LOW_PRECEDENT_FLOOR = int(os.getenv("LOW_PRECEDENT_FLOOR", "3"))
+RETRIEVER_MAX_RETRIES = int(os.getenv("RETRIEVER_MAX_RETRIES", "2"))
+BROAD_SIMILARITY_THRESHOLD = float(
+    os.getenv("BROAD_SIMILARITY_THRESHOLD", str(max(SIMILARITY_THRESHOLD / 3.0, 0.01)))
+)
+
+# Escalation Agent: if a live LLM call fails (quota, network, missing key) the
+# service layer can fall back to a deterministic, no-LLM "sample mode" run that
+# still produces a valid final report flagged ``human_review_required``.
+LEGAL_FALLBACK_TO_SAMPLE = (
+    os.getenv("LEGAL_FALLBACK_TO_SAMPLE", "true").lower() == "true"
+)
 
 API_HOST = os.getenv("API_HOST", "0.0.0.0")
 API_PORT = int(os.getenv("API_PORT", "8001"))
