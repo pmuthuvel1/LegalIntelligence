@@ -12,15 +12,15 @@ from app.exceptions import ConfigurationError
 def test_get_chat_model_passes_base_url():
     with patch.dict("os.environ", {
         "OPENAI_API_KEY": "test-key",
-        "OPENAI_BASE_URL": "https://api.example.com/v1",
-        "OPENAI_MODEL": "gpt-test",
+        "OPENAI_BASE_URL": "https://api.core42.ai/v1",
+        "COMPASS_CHAT_MODEL": "gpt-test",
     }), patch("langchain_openai.ChatOpenAI") as mock_chat:
         # Clear the lru_cache before calling
         llm.get_chat_model.cache_clear()
         llm.get_chat_model()
         kwargs = mock_chat.call_args.kwargs
         assert kwargs["api_key"] == "test-key"
-        assert kwargs["base_url"] == "https://api.example.com/v1"
+        assert kwargs["base_url"] == "https://api.core42.ai/v1"
         assert kwargs["model"] == "gpt-test"
 
 
@@ -40,7 +40,7 @@ def test_required_env_missing():
 def test_llm_available_with_both_env_vars():
     with patch.dict("os.environ", {
         "OPENAI_API_KEY": "test-key",
-        "OPENAI_BASE_URL": "https://api.example.com/v1",
+        "OPENAI_BASE_URL": "https://api.core42.ai/v1",
     }):
         assert llm.llm_available() is True
 
@@ -48,14 +48,27 @@ def test_llm_available_with_both_env_vars():
 @pytest.mark.no_llm_mock
 def test_llm_available_missing_key():
     with patch.dict("os.environ", {
-        "OPENAI_BASE_URL": "https://api.example.com/v1",
+        "OPENAI_BASE_URL": "https://api.core42.ai/v1",
     }, clear=True):
         assert llm.llm_available() is False
 
 
 @pytest.mark.no_llm_mock
-def test_llm_available_missing_base_url():
+def test_llm_available_with_default_base_url():
+    """Base URL has a sensible default; only the API key is strictly required."""
     with patch.dict("os.environ", {
         "OPENAI_API_KEY": "test-key",
     }, clear=True):
-        assert llm.llm_available() is False
+        assert llm.llm_available() is True
+
+
+@pytest.mark.no_llm_mock
+def test_env_base_url_takes_precedence_over_default():
+    """Value from environment must always take precedence over the built-in default."""
+    with patch.dict("os.environ", {
+        "OPENAI_API_KEY": "test-key",
+        "OPENAI_BASE_URL": "https://api.core42.ai/v1",
+    }, clear=True), patch("langchain_openai.ChatOpenAI") as mock_chat:
+        llm.get_chat_model.cache_clear()
+        llm.get_chat_model()
+        assert mock_chat.call_args.kwargs["base_url"] == "https://api.core42.ai/v1"
