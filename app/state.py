@@ -50,3 +50,13 @@ class LegalCaseState(TypedDict, total=False):
     errors: Annotated[list[str], append_lists]
     final_report: dict[str, Any]
     messages: Annotated[list, add_messages]
+
+    # ---- Tracing / observability ----
+    trace_id: str
+    trace_file: str
+
+    # ---- Escalation signals (set by critic, consumed by supervisor) ----
+    needs_escalation: bool
+    escalation_reasons: Annotated[list[str], append_lists]
+    human_review_required: bool
+
