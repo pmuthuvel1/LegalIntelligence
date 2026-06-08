@@ -1,0 +1,341 @@
+{
+  "use_case_id": 21,
+  "report": {
+    "generated_at": "2026-06-07T15:11:02.105000+00:00",
+    "case_id": "DEMO-FRAUD-005",
+    "title": "Hammond v. Pioneer Investments \u2014 fraud in the inducement of stock purchase",
+    "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "quality_score": 78.5,
+    "revision_count": 1,
+    "forced_approval": false,
+    "critique_summary": {
+      "final_score": 78.5,
+      "recommendations": [
+        "Strengthen scienter narrative with the CFO emails before trial.",
+        "Analysis meets quality thresholds; ready for supervisor approval."
+      ],
+      "partner_critique": null
+    },
+    "critique_history": [
+      {
+        "revision": 0,
+        "quality_score": 71.0,
+        "approval_threshold": 70.0,
+        "dimension_scores": {"precedents": 72.0, "outcomes": 70.0, "strategy": 71.5},
+        "issues": ["Reliance theory under-developed against integration clause."],
+        "recommendations": ["Tie pre-signing PPM delivery to reliance allegations more explicitly."],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": false
+      },
+      {
+        "revision": 1,
+        "quality_score": 78.5,
+        "approval_threshold": 70.0,
+        "dimension_scores": {"precedents": 78.0, "outcomes": 77.0, "strategy": 80.0},
+        "issues": [],
+        "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+        "suggested_rewrite_target": "strategy",
+        "approved_by_critic": true
+      }
+    ],
+    "structured_case": {
+      "case_id": "DEMO-FRAUD-005",
+      "title": "Hammond v. Pioneer Investments \u2014 fraud in the inducement of stock purchase",
+      "jurisdiction": "Arkansas",
+      "court_type": "Circuit Court",
+      "venue": "Sebastian County",
+      "parties": {"plaintiff": "Marcus Hammond", "defendant": "Pioneer Investments LLC"},
+      "claims": ["fraud in the inducement", "negligent misrepresentation", "rescission"],
+      "legal_issues": ["material misrepresentation", "scienter", "reasonable reliance", "damages"],
+      "relief_sought": [
+        "Rescission of the September 2025 stock purchase agreement",
+        "Restitution of the $250,000 purchase price",
+        "Consequential damages and punitive damages",
+        "Costs and attorney fees as allowed by statute"
+      ],
+      "key_facts": [
+        "Defendant's principals provided a private placement memorandum overstating Q2 2025 revenue by 38%.",
+        "Plaintiff received those statements two days before signing the September 15, 2025 stock purchase agreement.",
+        "Internal emails produced in pre-suit demand show defendant's CFO knew the figures were unsupported.",
+        "Plaintiff would not have invested at the disclosed valuation but for the misstatements."
+      ],
+      "contract_clauses": [
+        {"name": "Representations and warranties", "text": "Seller represents that all financial statements furnished to Buyer fairly present the financial condition of the company in all material respects."},
+        {"name": "Integration", "text": "This agreement constitutes the entire understanding of the parties and supersedes all prior oral and written communications."}
+      ],
+      "procedural_posture": "pre-filing",
+      "your_role": "plaintiff",
+      "intake_timestamp": "2026-06-07T15:11:02.090000+00:00"
+    },
+    "precedent_analysis": {
+      "precedent_count": 5,
+      "plaintiff_win_rate_in_sample": 0.4,
+      "top_issues_in_corpus": [
+        ["fraud", 2],
+        ["damages", 2],
+        ["misrepresentation", 1],
+        ["breach of contract", 1],
+        ["rescission", 1]
+      ],
+      "cases": [
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 21.7,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "88 Ark. 142 (1933)",
+          "name": "Coleman v. Delta Securities",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1933-05-14",
+          "relevance_score": 12.8,
+          "holding_summary": "An integration clause does not bar a claim that the contract itself was procured by fraud.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "71 Ark. 194 (1902)",
+          "name": "Smith v. Jones Mercantile Co.",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1902-03-15",
+          "relevance_score": 3.4,
+          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "75 Ark. 88 (1910)",
+          "name": "Thompson v. Greenacre Estates",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1910-06-20",
+          "relevance_score": 2.1,
+          "holding_summary": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
+          "citation": "82 Ark. 220 (1925)",
+          "name": "Brown v. City Contractors",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1925-04-18",
+          "relevance_score": 1.6,
+          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "favorable_precedents": [
+        {
+          "citation": "88 Ark. 142 (1933)",
+          "name": "Coleman v. Delta Securities",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1933-05-14",
+          "relevance_score": 12.8,
+          "holding_summary": "An integration clause does not bar a claim that the contract itself was procured by fraud.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        }
+      ],
+      "unfavorable_precedents": [
+        {
+          "citation": "80 Ark. 55 (1920)",
+          "name": "Miller v. Pioneer Investments",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1920-09-05",
+          "relevance_score": 21.7,
+          "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+          "outcome_for_plaintiff": false,
+          "source_url": "https://case.law/"
+        }
+      ]
+    },
+    "predicted_outcomes": {
+      "methodology": "Bayesian-style estimate from CAP precedent sample plaintiff outcomes, adjusted for party role and precedent depth.",
+      "confidence": "low",
+      "precedent_sample_size": 5,
+      "role_analyzed": "plaintiff",
+      "scenarios": [
+        {"scenario": "most_likely", "description": "Liability finding on misrepresentation with rescission and restitution of $250,000.", "estimated_probability": 0.55},
+        {"scenario": "best_case", "description": "Rescission plus consequential and punitive damages on clear and convincing proof of scienter.", "estimated_probability": 0.3},
+        {"scenario": "worst_case", "description": "Defense verdict on reasonable-reliance grounds given the integration clause and sophisticated-investor defense.", "estimated_probability": 0.3}
+      ],
+      "likely_judgment_summary": "Liability finding on misrepresentation with rescission and restitution of $250,000.",
+      "not_legal_advice": true
+    },
+    "win_strategies": [
+      {
+        "priority": 1,
+        "title": "Pin scienter to the CFO emails",
+        "actions": [
+          "Authenticate emails through metadata and custodian declarations.",
+          "Build a timeline showing knowledge predates PPM transmission to plaintiff."
+        ],
+        "rationale": "Scienter is the dispositive element; documentary proof neutralizes 'mistake' defenses."
+      },
+      {
+        "priority": 2,
+        "title": "Defeat integration-clause defense early",
+        "actions": [
+          "Plead Coleman v. Delta Securities expressly in the complaint.",
+          "Move in limine to preclude reliance on the integration clause as a bar to fraud."
+        ],
+        "rationale": "Arkansas precedent allows fraud-in-the-inducement claims notwithstanding integration."
+      },
+      {
+        "priority": 3,
+        "title": "Quantify rescission and consequential damages",
+        "actions": [
+          "Prepare an accounting of the $250,000 purchase price plus pre-judgment interest.",
+          "Document consequential losses (opportunity cost, tax effects) with a forensic accountant."
+        ],
+        "rationale": "Rescission requires status quo ante; consequentials require admissible expert proof."
+      },
+      {
+        "priority": 4,
+        "title": "Position for punitive damages",
+        "actions": [
+          "Plead facts supporting clear and convincing evidence of intentional misconduct.",
+          "Preserve net-worth discovery for the damages phase."
+        ],
+        "rationale": "Punitives raise settlement leverage and require front-loaded pleading specificity under Rule 9(b)."
+      },
+      {
+        "priority": 5,
+        "title": "Settlement corridor anchored to rescission",
+        "actions": [
+          "Lead negotiation with rescission and full restitution as the floor.",
+          "Reserve punitive-damage demand for impasse leverage."
+        ],
+        "rationale": "Defendants commonly settle rescission cases once scienter proof crystallizes."
+      }
+    ],
+    "favorable_judgment_tactics": [
+      {"tactic": "Early dispositive framing", "detail": "Move for partial summary judgment on misrepresentation and materiality once the CFO emails are authenticated."},
+      {"tactic": "Judicial economy narrative", "detail": "Frame the dispute as a narrow paper case: PPM vs. internal financials vs. plaintiff's signature timeline."},
+      {"tactic": "Remedy calibration", "detail": "Request rescission first, with damages as alternative relief, to maintain optionality."},
+      {"tactic": "Settlement corridor", "detail": "Use scenario probabilities to anchor mediation around restitution plus a measured premium."}
+    ],
+    "filing_package": {
+      "status": "draft_for_attorney_review",
+      "complaint_outline": [
+        {"section": "Caption", "content": "Marcus Hammond v. Pioneer Investments LLC"},
+        {"section": "Jurisdiction & Venue", "content": "Arkansas \u2014 Sebastian County"},
+        {"section": "Parties", "content": "Plaintiff: Marcus Hammond; Defendant: Pioneer Investments LLC"},
+        {"section": "Claims for Relief", "content": "fraud in the inducement; negligent misrepresentation; rescission"},
+        {"section": "Statement of Facts", "content": "Particularized fraud allegations under Rule 9(b): the who, what, when, where, and how of the misstatements."},
+        {"section": "Prayer for Relief", "content": "Rescission and restitution of $250,000; consequential and punitive damages; costs and fees as allowed."}
+      ],
+      "proposed_exhibits": [
+        {"id": "Exhibit A", "description": "Private placement memorandum dated September 2025"},
+        {"id": "Exhibit B", "description": "Stock purchase agreement signed September 15, 2025"},
+        {"id": "Exhibit C", "description": "Internal CFO emails reflecting knowledge of unsupported revenue figures"},
+        {"id": "Exhibit D", "description": "Key precedent: 88 Ark. 142 (1933) Coleman v. Delta Securities"},
+        {"id": "Exhibit E", "description": "Forensic accountant's preliminary report"}
+      ],
+      "pre_filing_checklist": [
+        "Confirm three-year fraud statute of limitations and any discovery-rule tolling.",
+        "Plead fraud with Rule 9(b) particularity.",
+        "Verify filing fee and e-filing account for Sebastian County Circuit Court.",
+        "Include certificate of service template.",
+        "Review formatting requirements (margins, line numbering, word limits)."
+      ],
+      "how_to_file": {
+        "steps": [
+          "Open e-filing portal for Circuit Court.",
+          "Select complaint initiating civil action.",
+          "Upload PDF with embedded exhibits; pay filing fee.",
+          "Serve defendant per Rule 4 / local equivalent within required period."
+        ],
+        "note": "This system does not e-file on your behalf."
+      }
+    },
+    "top_precedents": [
+      {
+        "relevance_score": 21.7,
+        "cap_id": "cap-sample-005",
+        "citation": "80 Ark. 55 (1920)",
+        "name": "Miller v. Pioneer Investments",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1920-09-05",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": false,
+        "legal_issues": ["fraud", "misrepresentation", "damages"],
+        "headnotes": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
+        "snippet": "Plaintiff failed to prove reasonable reliance given prior independent diligence undertaken before signing.",
+        "source_url": "https://case.law/"
+      },
+      {
+        "relevance_score": 12.8,
+        "cap_id": "cap-sample-009",
+        "citation": "88 Ark. 142 (1933)",
+        "name": "Coleman v. Delta Securities",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1933-05-14",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": ["fraud", "integration clause", "rescission"],
+        "headnotes": "An integration clause does not bar a claim that the contract itself was procured by fraud.",
+        "snippet": "Where misrepresentations induce the contract, the integration clause cannot insulate the wrongdoing party.",
+        "source_url": "https://case.law/"
+      }
+    ],
+    "agent_trace": [
+      "Intake agent structured the matter for research and strategy.",
+      "Research agent retrieved 5 CAP precedents.",
+      "Precedent analyst reviewed 5 cases; sample plaintiff win rate: 0.4.",
+      "Outcome predictor: most-likely scenario probability ~0.55 (confidence: low).",
+      "Critic review (rev 0): score 71.0/100, REVISE \u2192 strengthen reliance theory.",
+      "Strategy agent rewrote reliance section and added Coleman v. Delta Securities anchor.",
+      "Critic review (rev 1): score 78.5/100, PASS \u2192 suggested target: strategy."
+    ],
+    "agent_messages": [
+      {"agent": "research", "content": "Research agent retrieved 5 CAP precedents focused on misrepresentation."},
+      {"agent": "critic", "content": "Critic review (rev 0): score 71.0/100, REVISE \u2192 reliance theory under-developed against integration clause."},
+      {"agent": "strategy", "content": "Strategy agent revised approach to lead with Coleman v. Delta Securities."},
+      {"agent": "critic", "content": "Critic review (rev 1): score 78.5/100, PASS \u2192 ready for supervisor approval."}
+    ],
+    "validation_errors": [],
+    "data_sources": [
+      "Caselaw Access Project (https://case.law/)",
+      "Local corpus in data/cases/"
+    ]
+  },
+  "legal_caveats": [
+    "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
+    "Predictions are not guarantees of court outcomes.",
+    "Local rules, judges, and recent unpublished decisions may differ from CAP corpus.",
+    "Verify all citations and procedural requirements with primary sources."
+  ],
+  "errors": [],
+  "quality_score": 78.5,
+  "revision_count": 1,
+  "critique_history": [
+    {
+      "revision": 0,
+      "quality_score": 71.0,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 72.0, "outcomes": 70.0, "strategy": 71.5},
+      "issues": ["Reliance theory under-developed against integration clause."],
+      "recommendations": ["Tie pre-signing PPM delivery to reliance allegations more explicitly."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": false
+    },
+    {
+      "revision": 1,
+      "quality_score": 78.5,
+      "approval_threshold": 70.0,
+      "dimension_scores": {"precedents": 78.0, "outcomes": 77.0, "strategy": 80.0},
+      "issues": [],
+      "recommendations": ["Analysis meets quality thresholds; ready for supervisor approval."],
+      "suggested_rewrite_target": "strategy",
+      "approved_by_critic": true
+    }
+  ],
+  "thread_id": "case-fraud-005c2d3e"
+}
+
