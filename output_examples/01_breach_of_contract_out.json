@@ -1,8 +1,9 @@
 {
+  "use_case_id": 21,
   "report": {
-    "generated_at": "2026-05-31T13:52:43.009135+00:00",
-    "case_id": "DEMO-BREACH-001",
-    "title": "Acme Supply v. Delta Distributors \u2014 anticipatory breach of goods contract",
+    "generated_at": "2026-05-31T13:52:44.011178+00:00",
+    "case_id": "DEMO-EMP-002",
+    "title": "Jordan Lee v. Ozark Tech \u2014 wrongful termination under definite-term contract",
     "disclaimer": "This system provides legal information and research assistance only. It is not a law firm, does not provide legal advice, and does not create an attorney-client relationship. Outcomes, strategies, and predictions are probabilistic estimates based on historical cases from the Caselaw Access Project (https://case.law/) and may be incomplete or incorrect. Consult a licensed attorney in your jurisdiction before filing or relying on any output.",
     "quality_score": 82.5,
     "revision_count": 0,
@@ -33,47 +34,44 @@
       }
     ],
     "structured_case": {
-      "case_id": "DEMO-BREACH-001",
-      "title": "Acme Supply v. Delta Distributors \u2014 anticipatory breach of goods contract",
+      "case_id": "DEMO-EMP-002",
+      "title": "Jordan Lee v. Ozark Tech \u2014 wrongful termination under definite-term contract",
       "jurisdiction": "Arkansas",
       "court_type": "Circuit Court",
-      "venue": "Pulaski County",
+      "venue": "Washington County",
       "parties": {
-        "plaintiff": "Acme Supply LLC",
-        "defendant": "Delta Distributors Inc."
+        "plaintiff": "Jordan Lee",
+        "defendant": "Ozark Tech Partners LLC"
       },
       "claims": [
-        "breach of contract",
-        "anticipatory breach",
-        "expectation damages"
+        "breach of employment contract",
+        "wrongful termination",
+        "damages for unexpired term"
       ],
       "legal_issues": [
-        "anticipatory repudiation",
-        "damages on resale"
+        "breach of employment contract",
+        "wrongful termination",
+        "damages for unexpired term"
       ],
       "relief_sought": [
-        "Compensatory damages of $125,000",
-        "Prejudgment interest",
-        "Costs and reasonable attorney fees if contract provides"
+        "Wages for remaining eight months of contract term",
+        "Mitigation credit for part-time earnings",
+        "Declaratory judgment on contract validity"
       ],
       "key_facts": [
-        "Written contract dated January 5, 2025 for delivery of 500 units on March 15, 2025.",
-        "Defendant emailed March 1, 2025 refusing to accept delivery without legal excuse.",
-        "Plaintiff resold goods at market and seeks price differential."
+        "One-year employment agreement signed April 1, 2025 with fixed end date March 31, 2026.",
+        "Defendant terminated plaintiff without cause on August 1, 2025 citing restructuring.",
+        "Plaintiff mitigated by obtaining part-time work paying 40% of prior salary."
       ],
       "contract_clauses": [
         {
-          "name": "Delivery clause",
-          "text": "Seller shall deliver 500 units FOB Little Rock on March 15, 2025."
-        },
-        {
-          "name": "Remedies clause",
-          "text": "Upon breach, non-breaching party may resell in good faith and recover expectation damages."
+          "name": "Term",
+          "text": "Employment shall continue for twelve months unless terminated for cause as defined in Section 4."
         }
       ],
       "procedural_posture": "pre-filing",
       "your_role": "plaintiff",
-      "intake_timestamp": "2026-05-31T13:52:42.996146+00:00"
+      "intake_timestamp": "2026-05-31T13:52:44.000337+00:00"
     },
     "precedent_analysis": {
       "precedent_count": 6,
@@ -88,36 +86,36 @@
           2
         ],
         [
+          "employment contract",
+          1
+        ],
+        [
+          "wrongful termination",
+          1
+        ],
+        [
           "anticipatory breach",
-          1
-        ],
-        [
-          "unjust enrichment",
-          1
-        ],
-        [
-          "quantum meruit",
           1
         ]
       ],
       "cases": [
         {
-          "citation": "71 Ark. 194 (1902)",
-          "name": "Smith v. Jones Mercantile Co.",
+          "citation": "78 Ark. 401 (1915)",
+          "name": "Davis v. Ozark Manufacturing",
           "court": "Arkansas Supreme Court",
-          "decision_date": "1902-03-15",
-          "relevance_score": 24.4732,
-          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
+          "decision_date": "1915-01-10",
+          "relevance_score": 20.8895,
+          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
         },
         {
-          "citation": "82 Ark. 220 (1925)",
-          "name": "Brown v. City Contractors",
+          "citation": "71 Ark. 194 (1902)",
+          "name": "Smith v. Jones Mercantile Co.",
           "court": "Arkansas Supreme Court",
-          "decision_date": "1925-04-18",
-          "relevance_score": 7.0614,
-          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+          "decision_date": "1902-03-15",
+          "relevance_score": 5.0143,
+          "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
         },
@@ -126,18 +124,18 @@
           "name": "Williams v. Central Railroad",
           "court": "Arkansas Supreme Court",
           "decision_date": "1905-11-02",
-          "relevance_score": 2.9863,
+          "relevance_score": 3.414,
           "holding_summary": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
           "outcome_for_plaintiff": false,
           "source_url": "https://case.law/"
         },
         {
-          "citation": "78 Ark. 401 (1915)",
-          "name": "Davis v. Ozark Manufacturing",
+          "citation": "82 Ark. 220 (1925)",
+          "name": "Brown v. City Contractors",
           "court": "Arkansas Supreme Court",
-          "decision_date": "1915-01-10",
-          "relevance_score": 2.6182,
-          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+          "decision_date": "1925-04-18",
+          "relevance_score": 3.3995,
+          "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
         },
@@ -146,7 +144,7 @@
           "name": "Thompson v. Greenacre Estates",
           "court": "Arkansas Supreme Court",
           "decision_date": "1910-06-20",
-          "relevance_score": 2.243,
+          "relevance_score": 1.6283,
           "holding_summary": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
@@ -156,7 +154,7 @@
           "name": "Miller v. Pioneer Investments",
           "court": "Arkansas Supreme Court",
           "decision_date": "1920-09-05",
-          "relevance_score": 1.4473,
+          "relevance_score": 0.9792,
           "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
           "outcome_for_plaintiff": false,
           "source_url": "https://case.law/"
@@ -164,11 +162,21 @@
       ],
       "favorable_precedents": [
         {
+          "citation": "78 Ark. 401 (1915)",
+          "name": "Davis v. Ozark Manufacturing",
+          "court": "Arkansas Supreme Court",
+          "decision_date": "1915-01-10",
+          "relevance_score": 20.8895,
+          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+          "outcome_for_plaintiff": true,
+          "source_url": "https://case.law/"
+        },
+        {
           "citation": "71 Ark. 194 (1902)",
           "name": "Smith v. Jones Mercantile Co.",
           "court": "Arkansas Supreme Court",
           "decision_date": "1902-03-15",
-          "relevance_score": 24.4732,
+          "relevance_score": 5.0143,
           "holding_summary": "Where a buyer repudiates before the delivery date, the seller may treat the contract as breached and recover expectation damages measured by the contract price less resale proceeds.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
@@ -178,18 +186,8 @@
           "name": "Brown v. City Contractors",
           "court": "Arkansas Supreme Court",
           "decision_date": "1925-04-18",
-          "relevance_score": 7.0614,
+          "relevance_score": 3.3995,
           "holding_summary": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
-          "outcome_for_plaintiff": true,
-          "source_url": "https://case.law/"
-        },
-        {
-          "citation": "78 Ark. 401 (1915)",
-          "name": "Davis v. Ozark Manufacturing",
-          "court": "Arkansas Supreme Court",
-          "decision_date": "1915-01-10",
-          "relevance_score": 2.6182,
-          "holding_summary": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
         },
@@ -198,7 +196,7 @@
           "name": "Thompson v. Greenacre Estates",
           "court": "Arkansas Supreme Court",
           "decision_date": "1910-06-20",
-          "relevance_score": 2.243,
+          "relevance_score": 1.6283,
           "holding_summary": "Specific performance is appropriate for land contracts because each parcel is unique; money damages are presumptively inadequate.",
           "outcome_for_plaintiff": true,
           "source_url": "https://case.law/"
@@ -210,7 +208,7 @@
           "name": "Williams v. Central Railroad",
           "court": "Arkansas Supreme Court",
           "decision_date": "1905-11-02",
-          "relevance_score": 2.9863,
+          "relevance_score": 3.414,
           "holding_summary": "Contributory negligence bars recovery where the plaintiff's conduct is a proximate cause of the injury and fails to exercise ordinary care.",
           "outcome_for_plaintiff": false,
           "source_url": "https://case.law/"
@@ -220,7 +218,7 @@
           "name": "Miller v. Pioneer Investments",
           "court": "Arkansas Supreme Court",
           "decision_date": "1920-09-05",
-          "relevance_score": 1.4473,
+          "relevance_score": 0.9792,
           "holding_summary": "Fraud in the inducement requires a material misrepresentation, scienter, reasonable reliance, and resulting damages.",
           "outcome_for_plaintiff": false,
           "source_url": "https://case.law/"
@@ -240,7 +238,7 @@
         },
         {
           "scenario": "best_case",
-          "description": "Full relief: Compensatory damages of $125,000, Prejudgment interest, Costs and reasonable attorney fees if contract provides.",
+          "description": "Full relief: Wages for remaining eight months of contract term, Mitigation credit for part-time earnings, Declaratory judgment on contract validity.",
           "estimated_probability": 0.817
         },
         {
@@ -322,19 +320,19 @@
       "complaint_outline": [
         {
           "section": "Caption",
-          "content": "Acme Supply LLC v. Delta Distributors Inc."
+          "content": "Jordan Lee v. Ozark Tech Partners LLC"
         },
         {
           "section": "Jurisdiction & Venue",
-          "content": "Arkansas \u2014 Pulaski County"
+          "content": "Arkansas \u2014 Washington County"
         },
         {
           "section": "Parties",
-          "content": "Plaintiff: Acme Supply LLC; Defendant: Delta Distributors Inc."
+          "content": "Plaintiff: Jordan Lee; Defendant: Ozark Tech Partners LLC"
         },
         {
           "section": "Claims for Relief",
-          "content": "breach of contract; anticipatory breach; expectation damages"
+          "content": "breach of employment contract; wrongful termination; damages for unexpired term"
         },
         {
           "section": "Statement of Facts",
@@ -342,7 +340,7 @@
         },
         {
           "section": "Prayer for Relief",
-          "content": "Compensatory damages of $125,000; Prejudgment interest; Costs and reasonable attorney fees if contract provides"
+          "content": "Wages for remaining eight months of contract term; Mitigation credit for part-time earnings; Declaratory judgment on contract validity"
         }
       ],
       "proposed_exhibits": [
@@ -360,11 +358,11 @@
         },
         {
           "id": "Exhibit D",
-          "description": "Key precedent: 71 Ark. 194 (1902)"
+          "description": "Key precedent: 78 Ark. 401 (1915)"
         },
         {
           "id": "Exhibit E",
-          "description": "Key precedent: 82 Ark. 220 (1925)"
+          "description": "Key precedent: 71 Ark. 194 (1902)"
         },
         {
           "id": "Exhibit F",
@@ -390,7 +388,44 @@
     },
     "top_precedents": [
       {
-        "relevance_score": 24.4732,
+        "relevance_score": 20.8895,
+        "cap_id": "cap-sample-004",
+        "citation": "78 Ark. 401 (1915)",
+        "name": "Davis v. Ozark Manufacturing",
+        "court": "Arkansas Supreme Court",
+        "decision_date": "1915-01-10",
+        "jurisdiction": "Arkansas",
+        "outcome_for_plaintiff": true,
+        "legal_issues": [
+          "employment contract",
+          "wrongful termination",
+          "damages"
+        ],
+        "headnotes": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
+        "snippet": "An at-will presumption does not apply where the parties fixed a one-year term in writing. Summary discharge without cause supports recovery of unpaid wages for the remainder.",
+        "source_url": "https://case.law/",
+        "full_case": {
+          "id": "cap-sample-004",
+          "name": "Davis v. Ozark Manufacturing",
+          "decision_date": "1915-01-10",
+          "citations": [
+            {
+              "type": "official",
+              "cite": "78 Ark. 401"
+            }
+          ],
+          "source": "https://case.law/",
+          "casebody": {
+            "opinions": [
+              {
+                "text": "Wrongful termination during a definite term supports damages for the unexpired period, subject to mitigation."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "relevance_score": 5.0143,
         "cap_id": "cap-sample-001",
         "citation": "71 Ark. 194 (1902)",
         "name": "Smith v. Jones Mercantile Co.",
@@ -440,44 +475,7 @@
         }
       },
       {
-        "relevance_score": 7.0614,
-        "cap_id": "cap-sample-006",
-        "citation": "82 Ark. 220 (1925)",
-        "name": "Brown v. City Contractors",
-        "court": "Arkansas Supreme Court",
-        "decision_date": "1925-04-18",
-        "jurisdiction": "Arkansas",
-        "outcome_for_plaintiff": true,
-        "legal_issues": [
-          "unjust enrichment",
-          "quantum meruit",
-          "breach of contract"
-        ],
-        "headnotes": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
-        "snippet": "The subcontractor completed work accepted by the owner; failure to satisfy the statute of frauds does not permit retention of the benefit without payment.",
-        "source_url": "https://case.law/",
-        "full_case": {
-          "id": "cap-sample-006",
-          "name": "Brown v. City Contractors",
-          "decision_date": "1925-04-18",
-          "citations": [
-            {
-              "type": "official",
-              "cite": "82 Ark. 220"
-            }
-          ],
-          "source": "https://case.law/",
-          "casebody": {
-            "opinions": [
-              {
-                "text": "Quantum meruit recovery allowed where work was accepted despite unenforceable subcontract."
-              }
-            ]
-          }
-        }
-      },
-      {
-        "relevance_score": 2.9863,
+        "relevance_score": 3.414,
         "cap_id": "cap-sample-002",
         "citation": "72 Ark. 310 (1905)",
         "name": "Williams v. Central Railroad",
@@ -518,44 +516,44 @@
         }
       },
       {
-        "relevance_score": 2.6182,
-        "cap_id": "cap-sample-004",
-        "citation": "78 Ark. 401 (1915)",
-        "name": "Davis v. Ozark Manufacturing",
+        "relevance_score": 3.3995,
+        "cap_id": "cap-sample-006",
+        "citation": "82 Ark. 220 (1925)",
+        "name": "Brown v. City Contractors",
         "court": "Arkansas Supreme Court",
-        "decision_date": "1915-01-10",
+        "decision_date": "1925-04-18",
         "jurisdiction": "Arkansas",
         "outcome_for_plaintiff": true,
         "legal_issues": [
-          "employment contract",
-          "wrongful termination",
-          "damages"
+          "unjust enrichment",
+          "quantum meruit",
+          "breach of contract"
         ],
-        "headnotes": "Termination without cause during a definite employment term breaches the contract; damages are measured by wages for the unexpired term minus mitigation earnings.",
-        "snippet": "An at-will presumption does not apply where the parties fixed a one-year term in writing. Summary discharge without cause supports recovery of unpaid wages for the remainder.",
+        "headnotes": "Where a contract is unenforceable but benefits were conferred in good faith, quantum meruit may recover the reasonable value of services.",
+        "snippet": "The subcontractor completed work accepted by the owner; failure to satisfy the statute of frauds does not permit retention of the benefit without payment.",
         "source_url": "https://case.law/",
         "full_case": {
-          "id": "cap-sample-004",
-          "name": "Davis v. Ozark Manufacturing",
-          "decision_date": "1915-01-10",
+          "id": "cap-sample-006",
+          "name": "Brown v. City Contractors",
+          "decision_date": "1925-04-18",
           "citations": [
             {
               "type": "official",
-              "cite": "78 Ark. 401"
+              "cite": "82 Ark. 220"
             }
           ],
           "source": "https://case.law/",
           "casebody": {
             "opinions": [
               {
-                "text": "Wrongful termination during a definite term supports damages for the unexpired period, subject to mitigation."
+                "text": "Quantum meruit recovery allowed where work was accepted despite unenforceable subcontract."
               }
             ]
           }
         }
       },
       {
-        "relevance_score": 2.243,
+        "relevance_score": 1.6283,
         "cap_id": "cap-sample-003",
         "citation": "75 Ark. 88 (1910)",
         "name": "Thompson v. Greenacre Estates",
@@ -652,5 +650,5 @@
       "approved_by_critic": true
     }
   ],
-  "thread_id": "case-9f70a68ea878"
+  "thread_id": "case-90534fb12576"
 }
